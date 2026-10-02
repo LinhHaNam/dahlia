@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Dahlia Hanoi · Đặt phòng</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="menu">
+      <a href="index.html">Trang chủ</a>
+      <a href="tour.html">Khám phá tour</a>
+      <a class="on" href="booking.html">Đặt phòng</a>
+      <a href="contact.html">Gửi yêu cầu</a>
+      <span class="lang">VI / EN</span>
+      <a class="btn" href="#tour" style="display:inline-flex">Đặt ngay <img src="images/arrow-w.svg" alt=""></a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+  <section class="intro-band" style="padding-top:40px">
+    <p class="crumb">Trang chủ / Đặt phòng</p>
+    <p class="eyebrow">The Dahlia Hanoi · Hotel &amp; Apartment</p>
+    <h2>Một chốn nghỉ dành riêng cho bạn.</h2>
+    <p class="lead">Chọn phòng, xem giá rõ ràng và chuẩn bị cho những ngày thật đẹp ở Hà Nội.</p>
+    <div class="steps2"><span class="on">01 Chọn phòng</span><span>02 Thông tin</span><span>03 Xác nhận</span></div>
+  </section>
+  <section class="avail">
+    <div class="fields">
+      <div class="field"><label for="a1">Ngày nhận phòng</label><input id="a1" type="text" value="20/11/2026 · Thứ Sáu">
+      </div>
+      <div class="field"><label for="a2">Ngày trả phòng</label><input id="a2" type="text" value="22/11/2026 · Chủ Nhật">
+      </div>
+      <div class="field"><label for="a3">Số khách &amp; phòng</label><select id="a3">
+          <option>2 người lớn · 0 trẻ em · 1 phòng</option>
+        </select></div>
+      <a class="btn" href="#">Kiểm tra phòng <img src="images/arrow-w.svg" alt=""></a>
+    </div>
+    <p class="ok">✓ 2 loại phòng còn trống · 2 đêm lưu trú · Kết quả mẫu</p>
+  </section>
+  <section class="bmain">
+    <div class="lcol">
+      <h3>01. Chọn phòng của bạn</h3>
+      <div class="room2 sel"><img src="images/story.png" alt="Deluxe King">
+        <div class="d">
+          <div class="n"><img src="images/radio-on.svg" alt="">Deluxe King</div>
+          <p>28 m² · 1 giường King · Tối đa 2 khách</p>
+          <p style="color:var(--ink)">Wi-Fi · Bữa sáng · Điều hòa<br>Phòng tắm riêng · Không hút thuốc</p>
+          <p class="ok">Còn 3 phòng cho ngày đã chọn</p><span class="p">1.450.000 ₫ / đêm</span>
+          <p>2 đêm: 2.755.000 ₫ sau ưu đãi 5%</p><span class="c">✓ Đã chọn · 1 phòng</span>
+        </div>
+      </div>
+      <div class="room2"><img src="images/room-apt.png" alt="Căn hộ">
+        <div class="d">
+          <div class="n"><img src="images/radio-off.svg" alt="">Căn hộ một phòng ngủ</div>
+          <p>45 m² · Bếp riêng · Tối đa 3 khách</p>
+          <p style="color:var(--ink)">Wi-Fi · Bữa sáng · Điều hòa<br>Phòng khách · Bàn ăn · Không hút thuốc</p>
+          <p class="ok">Còn 2 căn hộ cho ngày đã chọn</p><span class="p">2.200.000 ₫ / đêm</span><span class="c">Chọn
+            căn hộ này →</span>
+        </div>
+      </div>
+      <form class="box" onsubmit="return false">
+        <h3>02. Thông tin người đặt</h3>
+        <p class="note" style="font-size:13px;color:var(--muted)">Vui lòng nhập thông tin để nhận xác nhận đặt phòng.
+          Các trường * là bắt buộc.</p>
+        <div class="field"><label for="b1">Họ và tên *</label><input id="b1" type="text" value="Nguyễn Minh Anh"></div>
+        <div class="two">
+          <div class="field"><label for="b2">Email *</label><input id="b2" type="email" value="minhanh@example.com">
+          </div>
+          <div class="field"><label for="b3">Số điện thoại *</label><input id="b3" type="tel" value="0912 345 678">
+          </div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="b4">Quốc gia / vùng lãnh thổ</label><select id="b4">
+              <option>Việt Nam</option>
+            </select></div>
+          <div class="field"><label for="b5">Thời gian đến dự kiến</label><select id="b5">
+              <option>14:00 – 15:00</option>
+            </select></div>
+        </div>
+        <div class="field"><label for="b6">Yêu cầu đặc biệt (không bắt buộc)</label><textarea
+            id="b6">Tôi muốn phòng ở tầng yên tĩnh, nếu có thể. Cảm ơn The Dahlia!</textarea></div>
+        <p class="small">Yêu cầu đặc biệt tùy tình trạng sẵn có. Chúng tôi sẽ xác nhận trước ngày đến.</p>
+      </form>
+      <div class="sec">
+        <h3>Trước khi bạn đến</h3>
+        <p style="font-size:13px;color:var(--muted)">Giờ nhận phòng: từ 14:00 · Trả phòng: trước 12:00.<br>Vui lòng mang
+          giấy tờ tùy thân khi nhận phòng. Phòng không hút thuốc. Liên hệ trước nếu bạn cần giường phụ hoặc đi cùng trẻ
+          nhỏ.</p>
+        <a class="btn alt" style="align-self:flex-start" href="contact.html">Gửi yêu cầu cho khách sạn <img
+            src="images/arrow-b.svg" alt=""></a>
+      </div>
+    </div>
+    <aside class="bside">
+      <div class="box sand">
+        <p class="eyebrow">Kỳ nghỉ của bạn</p>
+        <h3 class="serif" style="font-size:24px;font-weight:400">Thông tin đặt phòng</h3><img class="sumimg"
+          src="images/story.png" alt="">
+        <b style="font-size:15px">Deluxe King · 1 phòng</b>
+        <p style="font-size:13px;color:var(--muted)">20/11/2026 → 22/11/2026<br>2 đêm · 2 người lớn · 0 trẻ em<br>Bữa
+          sáng cho 2 khách đã bao gồm</p>
+        <hr class="l">
+        <div class="pr"><span>2 đêm × 1.450.000 ₫</span><span>2.900.000 ₫</span></div>
+        <div class="pr"><span>Ưu đãi trực tiếp 5%</span><span>−145.000 ₫</span></div>
+        <div class="pr"><span>Thuế &amp; phí dịch vụ</span><span>Đã bao gồm</span></div>
+        <hr class="l">
+        <div class="pr t"><span>Tổng thanh toán</span><span>2.755.000 ₫</span></div>
+        <p class="small">Giá cuối cùng cho 2 đêm, không có phí ẩn. Giá và ưu đãi là dữ liệu minh họa.</p>
+        <label class="agree"><input type="checkbox"><span>Tôi đồng ý với điều kiện đặt chỗ và chính sách bảo mật thông
+            tin.</span></label>
+        <button class="btn" type="button">Xác nhận đặt phòng <img src="images/arrow-w.svg" alt=""></button>
+        <p class="small">Thông tin xác nhận sẽ gửi đến email bạn đã nhập. Template không thực hiện thanh toán.</p>
+        <hr class="l"><b style="font-size:13px">Chính sách linh hoạt</b>
+        <p class="small" style="font-size:12px">Chính sách mẫu: hủy miễn phí trước 18:00 ngày 18/11/2026. Sau thời điểm
+          này, phí hủy bằng 1 đêm. Không đến nhận phòng: phí 100% đơn đặt.</p>
+      </div>
+    </aside>
+  </section>
+  <footer>
+    <div class="fcols">
+      <div>
+        <p class="brand">THE DAHLIA HANOI.</p>
+        <p style="font-size:10px;color:var(--brown)">HOTEL &amp; APARTMENT</p>
+        <p>Một chốn nghỉ an yên. Một hành trình đáng nhớ.</p>
+      </div>
+      <div><b>Hành trình của bạn</b>
+        <p>Khám phá tour · Phòng &amp; căn hộ</p>
+        <p>Gửi yêu cầu · Điều kiện đặt chỗ</p>
+      </div>
+      <div><b>Liên hệ tư vấn</b>
+        <p>booking@dahlia.example</p>
+        <p>+84 24 0000 0000 · Hà Nội, Việt Nam</p>
+        <p class="copy">thông tin</p>
+      </div>
+    </div>
+    <hr>
+    <p class="copy">© 2026 THE DAHLIA HANOI.</p>
+  </footer>
+</body>
+
+</html>

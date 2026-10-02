@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Dahlia Hanoi · Gửi yêu cầu</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="nav">
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="menu">
+      <a href="index.html">Trang chủ</a>
+      <a href="tour.html">Khám phá tour</a>
+      <a href="booking.html">Đặt phòng</a>
+      <a class="on" href="contact.html">Gửi yêu cầu</a>
+      <span class="lang">VI / EN</span>
+      <a class="btn" href="#tour" style="display:inline-flex">Đặt ngay <img src="images/arrow-w.svg" alt=""></a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+  <section class="intro-band">
+    <p class="crumb">Trang chủ / Gửi yêu cầu</p>
+    <p class="eyebrow">Chúng tôi lắng nghe bạn</p>
+    <h2>Một lời nhắn. Một hành trình riêng.</h2>
+    <p class="lead">Bạn cần tour riêng, kỳ nghỉ dài ngày hay một sự sắp xếp đặc biệt? Chia sẻ mong muốn, The Dahlia sẽ
+      giúp bạn lên kế hoạch.</p>
+  </section>
+  <section class="contact">
+    <form class="formcard" onsubmit="return false">
+      <h2>Gửi yêu cầu qua email</h2>
+      <p class="note">Các trường * là bắt buộc. Hãy để lại email chính xác để chúng tôi phản hồi.</p>
+      <div class="field"><label for="topic">Bạn cần hỗ trợ về *</label><select id="topic">
+          <option>Tour riêng &amp; lưu trú kết hợp</option>
+          <option>Tour trải nghiệm</option>
+          <option>Phòng &amp; căn hộ</option>
+        </select></div>
+      <div class="two">
+        <div class="field"><label for="name">Họ và tên *</label><input id="name" type="text" value="Nguyễn Minh Anh">
+        </div>
+        <div class="field"><label for="tel">Số điện thoại</label><input id="tel" type="tel" value="0912 345 678"></div>
+      </div>
+      <div class="field"><label for="email">Email nhận phản hồi *</label><input id="email" type="email"
+          value="minhanh@example.com"></div>
+      <div class="two">
+        <div class="field"><label for="d1">Ngày đến dự kiến</label><input id="d1" type="text" value="20/11/2026"></div>
+        <div class="field"><label for="d2">Ngày về dự kiến</label><input id="d2" type="text" value="22/11/2026"></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="g">Số lượng khách</label><select id="g">
+            <option>2 người lớn · 0 trẻ em</option>
+          </select></div>
+        <div class="field"><label for="b">Ngân sách dự kiến</label><select id="b">
+            <option>5.000.000 – 7.000.000 ₫</option>
+          </select></div>
+      </div>
+      <div class="field"><label for="sub">Tiêu đề yêu cầu *</label><input id="sub" type="text"
+          value="Tư vấn tour Ninh Bình &amp; phòng Deluxe King"></div>
+      <div class="field"><label for="msg">Lời nhắn của bạn *</label><textarea
+          id="msg">Chào The Dahlia, tôi muốn đặt phòng Deluxe King cho 2 đêm và tour Ninh Bình cho 2 người. Xin tư vấn lịch trình phù hợp, điểm đón và ưu đãi khi đặt kết hợp. Cảm ơn!</textarea>
+      </div>
+      <label class="agree"><input type="checkbox"><span>Tôi đồng ý với điều kiện đặt chỗ và chính sách bảo mật thông
+          tin.</span></label>
+      <button class="btn" type="submit">Gửi yêu cầu qua email <img src="images/arrow-w.svg" alt=""></button>
+      <p class="small">Bản mẫu giao diện: nút gửi chưa kết nối dịch vụ email. Thông tin nhập chỉ phục vụ minh họa.</p>
+    </form>
+    <aside><img class="ph" src="images/hero.png" alt="">
+      <div class="stack">
+        <p class="eyebrow">The Dahlia đồng hành</p>
+        <h2 style="font-size:24px">Trò chuyện cùng chúng tôi</h2>
+        <p class="lead" style="font-size:14px">Bạn có thể gửi email trực tiếp hoặc gọi để được tư vấn.</p>
+        <div class="ch"><img src="images/mail.svg" alt="">
+          <div><small>Email tư vấn</small><b>booking@dahlia.example</b></div>
+        </div>
+        <div class="ch"><img src="images/phone.svg" alt="">
+          <div><small>Điện thoại</small><b>+84 24 0000 0000</b></div>
+        </div>
+        <div class="ch"><img src="images/map-pin.svg" alt="">
+          <div><small>Điểm đến</small><b>Hà Nội, Việt Nam</b></div>
+        </div>
+        <p class="small">Thông tin trên là dữ liệu mẫu, cần thay bằng thông tin thực tế.</p>
+      </div>
+      <div class="tip"><b>Để tư vấn đúng với bạn</b>
+        <p>Hãy chia sẻ ngày dự kiến, số khách và sở thích của nhóm. Nếu cần đón sân bay, có trẻ nhỏ hoặc yêu cầu ăn uống
+          đặc biệt, đừng quên ghi trong lời nhắn.</p>
+        <p style="color:var(--ink);font-size:12px">Mục tiêu phản hồi: trong 24 giờ làm việc (nội dung minh họa).</p>
+      </div>
+      <div class="stack" style="width:100%;gap:16px"><b style="font-size:15px">Bạn đã có lựa chọn?</b>
+        <a class="btn alt" href="tour.html">Chọn tour &amp; đặt ngay <img src="images/arrow-b.svg" alt=""></a>
+        <a class="btn alt" href="booking.html">Kiểm tra phòng trống <img src="images/arrow-b.svg" alt=""></a>
+      </div>
+    </aside>
+  </section>
+  <footer>
+    <div class="fcols">
+      <div>
+        <p class="brand">THE DAHLIA HANOI.</p>
+        <p style="font-size:10px;color:var(--brown)">HOTEL &amp; APARTMENT</p>
+        <p>Một chốn nghỉ an yên. Một hành trình đáng nhớ.</p>
+      </div>
+      <div><b>Hành trình của bạn</b>
+        <p>Khám phá tour · Phòng &amp; căn hộ</p>
+        <p>Gửi yêu cầu · Điều kiện đặt chỗ</p>
+      </div>
+      <div><b>Liên hệ tư vấn</b>
+        <p>booking@dahlia.example</p>
+        <p>+84 24 0000 0000 · Hà Nội, Việt Nam</p>
+        <p class="copy">Thông tin</p>
+      </div>
+    </div>
+    <hr>
+    <p class="copy">© 2026 THE DAHLIA HANOI.</p>
+  </footer>
+</body>
+
+</html>

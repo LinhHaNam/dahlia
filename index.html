@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Dahlia Hanoi · Trang chủ</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="nav">
+    <a href="index.html"><img class="logo" src="images/logo.png" alt="The Dahlia Hanoi"></a>
+    <nav class="menu">
+      <a class="on" href="index.html">Trang chủ</a>
+      <a href="tour.html">Khám phá tour</a>
+      <a href="booking.html">Đặt phòng</a>
+      <a href="contact.html">Gửi yêu cầu</a>
+      <span class="lang">VI / EN</span>
+      <a class="btn" href="tour.html" style="display:inline-flex">Đặt ngay <img src="images/arrow-w.svg" alt=""></a>
+      <button class="burger" aria-label="Menu">☰</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="copy">
+      <p class="eyebrow">Ở lại thật lâu. Khám phá thật sâu.</p>
+      <h1>Hà Nội, theo cách của riêng bạn.</h1>
+      <p>Thức dậy trong một không gian ấm áp. Bước ra những con phố đầy câu chuyện. Cùng The Dahlia, tìm thấy nhịp điệu
+        của riêng mình.</p>
+      <a class="btn" href="tour.html">Khám phá &amp; đặt tour <img src="images/arrow-w.svg" alt=""></a>
+      <a class="u" href="booking.html">Tìm phòng nghỉ của bạn</a>
+      <p class="small">THE DAHLIA HANOI · HOTEL &amp; APARTMENT</p>
+    </div>
+    <div class="pic">
+      <img src="images/hero.png" alt="Hà Nội buổi sớm">
+      <div class="cap">HÀ NỘI · Những buổi sáng dịu dàng</div>
+    </div>
+  </section>
+
+  <section class="search">
+    <div class="tabs">
+      <button type="button" class="tab-btn on" data-tab="tour">Đặt tour trải nghiệm</button>
+      <button type="button" class="tab-btn" data-tab="room">Đặt phòng nghỉ</button>
+    </div>
+
+    <!-- Tab 1: Đặt tour trải nghiệm -->
+    <div class="tab-content on" id="tab-tour">
+      <div class="fields">
+        <div class="field"><label>Bạn muốn đi đâu?</label>
+          <div class="v"><span>Ninh Bình · Tràng An</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
+              fill="none">
+              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <div class="field"><label>Ngày khởi hành</label>
+          <div class="v"><span>20/11/2026 · Thứ Sáu</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
+              fill="none">
+              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <div class="field"><label>Số khách</label>
+          <div class="v"><span>2 người lớn · 0 trẻ em</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
+              fill="none">
+              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <a class="btn" href="tour.html">Tìm tour còn chỗ <img src="images/arrow-w.svg" alt=""></a>
+      </div>
+      <p>Giá rõ ràng trước khi đặt · Tư vấn hành trình riêng · Hỗ trợ bằng tiếng Việt</p>
+    </div>
+
+    <!-- Tab 2: Đặt phòng nghỉ -->
+    <div class="tab-content" id="tab-room">
+      <div class="fields">
+        <div class="field"><label>Ngày nhận phòng</label>
+          <div class="v"><span>20/11/2026 · Thứ Sáu</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
+              fill="none">
+              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <div class="field"><label>Ngày trả phòng</label>
+          <div class="v"><span>22/11/2026 · Chủ Nhật</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
+              fill="none">
+              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <div class="field"><label>Số khách &amp; phòng</label>
+          <div class="v"><span>2 người lớn · 0 trẻ em · 1 phòng</span><svg class="arr" width="12" height="12"
+              viewBox="0 0 12 12" fill="none">
+              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></div>
+        </div>
+        <a class="btn" href="booking.html">Kiểm tra phòng <img src="images/arrow-w.svg" alt=""></a>
+      </div>
+      <p>Đảm bảo giá tốt nhất khi đặt trực tiếp · Bữa sáng đi kèm · Hỗ trợ nhận phòng linh hoạt</p>
+    </div>
+  </section>
+
+  <section class="promises">
+    <div><span>✦</span>
+      <p>Lựa chọn tour &amp; phòng trong một nơi</p>
+    </div>
+    <div><span>✦</span>
+      <p>Lịch trình tinh gọn, trải nghiệm trọn vẹn</p>
+    </div>
+    <div><span>✦</span>
+      <p>Đội ngũ đồng hành trước &amp; trong chuyến đi</p>
+    </div>
+  </section>
+
+  <section class="split">
+    <img src="images/story.png" alt="Không gian nghỉ">
+    <div class="stack">
+      <p class="eyebrow">Một chốn để trở về</p>
+      <h2>Không chỉ là nơi nghỉ.<br>Là khởi đầu của hành trình.</h2>
+      <p class="lead">Giữa nhịp sống Hà Nội, The Dahlia dành cho bạn sự thư thái của một ngôi nhà và cảm hứng của một
+        chuyến đi. Từ căn phòng ấm cúng đến những hành trình miền Bắc, mọi lựa chọn đều bắt đầu từ bạn.</p>
+      <a class="btn alt" href="booking.html">Khám phá phòng &amp; căn hộ <img src="images/arrow-b.svg" alt=""></a>
+    </div>
+  </section>
+
+  <section class="band sand" id="tour">
+    <div class="row">
+      <div class="stack" style="gap:12px">
+        <p class="eyebrow">Đi xa hơn một chút</p>
+        <h2>Những hành trình đáng để đi.</h2>
+        <p class="lead">Rời phố một ngày, mang về nhiều hơn một kỷ niệm.</p>
+      </div>
+      <a class="btn alt" style="flex:none" href="#">Xem tất cả tour <img src="images/arrow-b.svg" alt=""></a>
+    </div>
+    <div class="grid">
+      <article class="tour"><img src="images/tour1.png" alt="Tràng An">
+        <div class="info">
+          <p class="eyebrow">Được yêu thích</p>
+          <h3>Ninh Bình — Một ngày giữa di sản</h3>
+          <p class="meta">1 ngày · Tràng An – Hoa Lư – Hang Múa</p>
+          <p class="price">1.250.000 ₫ / khách</p>
+          <p class="small">Giá mẫu · Có lịch khởi hành hằng ngày</p>
+          <a class="btn alt" href="#">Chọn tour &amp; xem lịch <img src="images/arrow-b.svg" alt=""></a>
+        </div>
+      </article>
+      <article class="tour"><img src="images/tour2.png" alt="Hạ Long">
+        <div class="info">
+          <p class="eyebrow">Nghỉ dưỡng</p>
+          <h3>Hạ Long — Chạm vào kỳ quan</h3>
+          <p class="meta">2 ngày 1 đêm · Du thuyền &amp; vịnh biển</p>
+          <p class="price">3.450.000 ₫ / khách</p>
+          <p class="small">Giá mẫu · Có lịch khởi hành hằng ngày</p>
+          <a class="btn alt" href="#">Chọn tour &amp; xem lịch <img src="images/arrow-b.svg" alt=""></a>
+        </div>
+      </article>
+      <article class="tour"><img src="images/tour3.png" alt="Phố cổ">
+        <div class="info">
+          <p class="eyebrow">Trải nghiệm địa phương</p>
+          <h3>Hà Nội — Hương vị phố cổ</h3>
+          <p class="meta">4 giờ · Đi bộ &amp; ẩm thực bản địa</p>
+          <p class="price">650.000 ₫ / khách</p>
+          <p class="small">Giá mẫu · Có lịch khởi hành hằng ngày</p>
+          <a class="btn alt" href="#">Chọn tour &amp; xem lịch <img src="images/arrow-b.svg" alt=""></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="band" id="phong">
+    <div class="row">
+      <div class="stack" style="gap:12px">
+        <p class="eyebrow">Nghỉ lại cùng The Dahlia</p>
+        <h2>Ấm áp như nhà, tinh tế như bạn.</h2>
+        <p class="lead">Chọn một không gian phù hợp, để mỗi ngày ở Hà Nội thật nhẹ nhàng.</p>
+      </div>
+      <a class="btn" style="flex:none" href="#">Kiểm tra phòng <img src="images/arrow-w.svg" alt=""></a>
+    </div>
+    <div class="grid rooms">
+      <article class="room"><img src="images/story.png" alt="Deluxe King">
+        <div class="info">
+          <h3>Deluxe King</h3>
+          <p class="sub">28 m² · 1 giường King · 2 khách</p>
+          <p class="price">Từ 1.450.000 ₫ / đêm</p>
+          <p class="meta">Wi-Fi miễn phí · Bữa sáng · Không hút thuốc</p>
+          <a class="btn alt" href="#">Chọn phòng này <img src="images/arrow-b.svg" alt=""></a>
+        </div>
+      </article>
+      <article class="room"><img src="images/room2.png" alt="Căn hộ một phòng ngủ">
+        <div class="info">
+          <h3>Căn hộ một phòng ngủ</h3>
+          <p class="sub">45 m² · Bếp riêng · 2–3 khách</p>
+          <p class="price">Từ 2.200.000 ₫ / đêm</p>
+          <p class="meta">Wi-Fi miễn phí · Bữa sáng · Không hút thuốc</p>
+          <a class="btn alt" href="#">Chọn phòng này <img src="images/arrow-b.svg" alt=""></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="split sand">
+    <div class="stack">
+      <p class="eyebrow">Một Hà Nội rất riêng</p>
+      <h2>Những điều nhỏ bé,<br>làm nên chuyến đi lớn.</h2>
+      <p class="lead">Một bát phở nóng buổi sớm, một tách cà phê bên ô cửa, một ngõ nhỏ chưa từng ghé. Hãy để chúng tôi
+        gợi ý những trải nghiệm gần gũi nhất với bạn.</p>
+      <a class="btn alt" href="#">Nhờ tư vấn hành trình <img src="images/arrow-b.svg" alt=""></a>
+    </div>
+    <img src="images/tour3.png" alt="Hương vị Hà Nội">
+  </section>
+
+  <section class="band" style="padding:64px var(--px)">
+    <p class="eyebrow">Đơn giản từ bước đầu</p>
+    <h2>Chuyến đi đẹp bắt đầu với 3 bước.</h2>
+    <div class="steps">
+      <div class="step"><span class="n">01</span>
+        <hr><b>Chọn trải nghiệm</b>
+        <p>Chọn tour hoặc phòng, ngày đi và số khách phù hợp.</p>
+      </div>
+      <div class="step"><span class="n">02</span>
+        <hr><b>Kiểm tra &amp; đặt chỗ</b>
+        <p>Xem tình trạng chỗ, chi tiết giá và điền thông tin của bạn.</p>
+      </div>
+      <div class="step"><span class="n">03</span>
+        <hr><b>Sẵn sàng lên đường</b>
+        <p>Nhận xác nhận cùng hướng dẫn để bắt đầu chuyến đi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <p class="eyebrow">Những kỷ niệm ở lại</p>
+    <p class="stars">★★★★★</p>
+    <blockquote>“Một căn phòng thật ấm áp và chuyến đi Ninh Bình được chuẩn bị chu đáo. Chúng tôi chỉ cần tận hưởng từng
+      khoảnh khắc.”</blockquote>
+    <p class="who">Minh Anh · Lưu trú &amp; tour Ninh Bình</p>
+    <p class="tiny">Nội dung đánh giá minh họa</p>
+  </section>
+
+  <section class="faq">
+    <div class="intro">
+      <p class="eyebrow">Trước chuyến đi</p>
+      <h2>Bạn hỏi,<br>The Dahlia trả lời.</h2>
+      <p class="lead">Những thông tin hữu ích để bạn đặt chỗ tự tin hơn.</p>
+    </div>
+    <div class="list">
+      <div class="q"><b>Tôi có thể đặt tour khi không lưu trú không?</b>
+        <p>Có. Bạn có thể chọn tour riêng hoặc kết hợp cùng phòng nghỉ tại The Dahlia.</p>
+      </div>
+      <div class="q"><b>Giá hiển thị đã bao gồm những gì?</b>
+        <p>Mỗi tour và phòng đều có mục bao gồm, khoản phí và tổng tiền trước khi xác nhận.</p>
+      </div>
+      <div class="q"><b>Tôi có thể thay đổi ngày đặt không?</b>
+        <p>Điều kiện thay đổi phụ thuộc từng lựa chọn. Vui lòng xem chính sách ngay tại trang đặt chỗ.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div>
+      <h2>Hẹn bạn một ngày ở Hà Nội.</h2>
+      <p>Căn phòng ấm áp và hành trình mới đang chờ bạn.</p>
+    </div>
+    <a class="btn" href="tour.html">Lên kế hoạch ngay <img src="images/arrow-w.svg" alt=""></a>
+  </section>
+
+  <footer>
+    <div class="fcols">
+      <div>
+        <p class="brand">THE DAHLIA HANOI.</p>
+        <p style="font-size:10px;color:var(--brown)">HOTEL &amp; APARTMENT</p>
+        <p>Một chốn nghỉ an yên. Một hành trình đáng nhớ.</p>
+      </div>
+      <div><b>Hành trình của bạn</b>
+        <p>Khám phá tour · Phòng &amp; căn hộ</p>
+        <p>Gửi yêu cầu · Điều kiện đặt chỗ</p>
+      </div>
+      <div><b>Liên hệ tư vấn</b>
+        <p>booking@dahlia.example</p>
+        <p>+84 24 0000 0000 · Hà Nội, Việt Nam</p>
+        <p class="copy">Thông tin</p>
+      </div>
+    </div>
+    <hr>
+    <p class="copy">© 2026 THE DAHLIA HANOI.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const tabBtns = document.querySelectorAll('.tabs .tab-btn');
+      const tabContents = {
+        tour: document.getElementById('tab-tour'),
+        room: document.getElementById('tab-room')
+      };
+
+      function activateTab(tabName) {
+        tabBtns.forEach(btn => {
+          btn.classList.toggle('on', btn.dataset.tab === tabName);
+        });
+        Object.keys(tabContents).forEach(key => {
+          if (tabContents[key]) {
+            tabContents[key].classList.toggle('on', key === tabName);
+          }
+        });
+      }
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const tab = this.dataset.tab;
+          activateTab(tab);
+          if (history.replaceState) {
+            history.replaceState(null, '', '#' + tab);
+          }
+        });
+      });
+
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#room' || hash === '#booking' || hash === '#phong') {
+        activateTab('room');
+      } else {
+        activateTab('tour');
+      }
+    })();
+  </script>
+</body>
+
+</html>
