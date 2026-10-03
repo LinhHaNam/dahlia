@@ -4,153 +4,1025 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Dahlia Hanoi · Chi tiết tour</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap">
+  <title>The Dahlia Travel · Chi tiết tour & Đặt tour</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif:wght@400;600&display=swap">
+  <script src="site-config.js"></script>
+  <script src="icons.js" defer></script>
 </head>
 
 <body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-promo" id="topBarPromo">
+      <i data-icon="gift"></i> <b>Ưu đãi mùa du lịch 2026:</b> Nhập mã <a href="#couponInput"
+        onclick="quickApplyCoupon('DAHLIA10')">DAHLIA10</a> giảm ngay 10% hoặc <a href="#couponInput"
+        onclick="quickApplyCoupon('TRANGNAU')">TRANGNAU</a> giảm 200.000₫!
+    </div>
+    <div class="top-bar-contact" id="topBarContact">
+      <span><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></span>
+      <span><i data-icon="chat"></i> Hỗ trợ Wapus / Zalo: <b>0988 888 888</b></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
   <header class="nav">
-    <a href="index.html"><img class="logo" src="images/logo.png" alt="The Dahlia Hanoi"></a>
+    <a class="logo-wrapper" href="index.html">
+      <img class="logo" src="images/logo.png" alt="The Dahlia Travel">
+      <div class="brand-text">
+        <span class="name">THE DAHLIA</span>
+        <span class="tagline">TOUR &amp; TRAVEL</span>
+      </div>
+    </a>
     <nav class="menu">
       <a href="index.html">Trang chủ</a>
       <a class="on" href="tour.html">Khám phá tour</a>
-      <a href="booking.html">Đặt phòng</a>
-      <a href="contact.html">Gửi yêu cầu</a>
-      <span class="lang">VI / EN</span>
-      <a class="btn" href="#tour" style="display:inline-flex">Đặt ngay <img src="images/arrow-w.svg" alt=""></a>
-      <button class="burger" aria-label="Menu">☰</button>
+      <a href="booking.html">Đặt phòng nghỉ</a>
+      <a href="contact.html">Liên hệ tư vấn</a>
     </nav>
+    <div class="nav-actions">
+      <a class="wapus-badge" href="https://wa.me/84988888888" target="_blank"
+        title="Tư vấn trực tiếp qua WhatsApp/Zalo">
+        <span class="dot"></span>
+        <span>Wapus: 0988 888 888</span>
+      </a>
+      <a class="btn sm" href="#bookingSidebar">Đặt tour ngay <img src="images/arrow-w.svg" alt=""></a>
+      <button class="burger" aria-label="Mở menu"></button>
+    </div>
   </header>
-  <section class="tp">
-    <p class="crumb">Trang chủ / Khám phá tour / Ninh Bình</p>
-    <p class="eyebrow">Hành trình miền Bắc · 1 ngày</p>
-    <h1 style="font-size:42px;line-height:1.3">Ninh Bình — Một ngày giữa di sản</h1>
-    <p class="lead">Tràng An · Hoa Lư · Hang Múa | Khởi hành từ Hà Nội</p>
-    <div class="chips"><span>★★★★★ 4,9/5 · 128 đánh giá mẫu</span><span>Nhóm tối đa 16 khách</span><span>Hướng dẫn viên
-        tiếng Việt</span></div>
-    <div class="gal"><img src="images/tour1.png" alt="Tràng An">
-      <div class="col"><img src="images/tour-b.png" alt=""><img src="images/tour-c.png" alt=""></div>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-head">
+      <div class="brand-text">
+        <span class="name">THE DAHLIA</span>
+        <span class="tagline">TOUR &amp; TRAVEL</span>
+      </div>
+      <button type="button" class="mobile-nav-close" id="closeMobileNav" aria-label="Đóng menu">
+        <i data-icon="close"></i>
+      </button>
     </div>
-  </section>
-  <section class="tmain">
-    <div class="tcol">
-      <div class="steps2"><span class="on">01 Chọn tour</span><span>02 Thông tin</span><span>03 Xác nhận</span></div>
-      <div class="sec">
-        <h3>Một ngày, ba miền ký ức.</h3>
-        <p>Rời Hà Nội để tìm về miền di sản. Lắng nghe câu chuyện cố đô Hoa Lư, thả mình trên dòng nước Tràng An và ngắm
-          Ninh Bình từ đỉnh Hang Múa. Một hành trình cân bằng giữa khám phá, nghỉ ngơi và những khung hình đáng nhớ.</p>
+    <nav class="mobile-nav-links">
+      <a href="index.html"><i data-icon="compass"></i> Trang chủ</a>
+      <a class="on" href="tour.html"><i data-icon="mountain"></i> Khám phá tour</a>
+      <a href="booking.html"><i data-icon="hotel"></i> Đặt phòng nghỉ</a>
+      <a href="contact.html"><i data-icon="chat"></i> Liên hệ tư vấn</a>
+    </nav>
+    <div class="mobile-nav-contact">
+      <p><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></p>
+      <p><i data-icon="chat"></i> Wapus: <b>0988 888 888</b></p>
+      <p><i data-icon="mail"></i> Email: <b>booking@dahlia.travel</b></p>
+      <a class="btn sm" href="#bookingSidebar" style="margin-top:10px;justify-content:center">Đặt tour ngay</a>
+    </div>
+  </div>
+
+  <!-- MAIN TOUR PAGE -->
+  <main class="tour-page-wrapper">
+    <!-- TOUR SWITCHER PILLS -->
+    <div class="tour-switch-nav">
+      <span class="label">Chọn điểm đến:</span>
+      <button type="button" class="tour-switch-pill active" onclick="switchTour('ninh-binh')" data-tour="ninh-binh">
+        <i data-icon="compass"></i> Ninh Bình (1 ngày)
+      </button>
+      <button type="button" class="tour-switch-pill" onclick="switchTour('ha-giang')" data-tour="ha-giang">
+        <i data-icon="mountain"></i> Hà Giang (3N2Đ)
+      </button>
+      <button type="button" class="tour-switch-pill" onclick="switchTour('sapa')" data-tour="sapa">
+        <i data-icon="cloud"></i> Sapa (2N1Đ)
+      </button>
+      <button type="button" class="tour-switch-pill" onclick="switchTour('ha-noi')" data-tour="ha-noi">
+        <i data-icon="landmark"></i> Hà Nội (1 ngày)
+      </button>
+      <button type="button" class="tour-switch-pill" onclick="switchTour('ha-long')" data-tour="ha-long">
+        <i data-icon="ship"></i> Hạ Long (2N1Đ)
+      </button>
+    </div>
+
+    <!-- TOUR DETAIL HEADER -->
+    <section class="tour-head">
+      <div class="breadcrumbs">
+        <a href="index.html">Trang chủ</a> / <a href="tour.html">Tour du lịch</a> / <span id="tourCrumbDest">Ninh
+          Bình</span>
       </div>
-      <div class="sec" style="gap:24px">
-        <h3>Lịch trình trong ngày</h3>
-        <div class="stop"><time>07:30</time>
-          <div><b>Đón bạn tại Hà Nội</b>
-            <p>Khởi hành bằng xe du lịch. Điểm đón tại The Dahlia hoặc khu vực phố cổ theo xác nhận.</p>
+      <h1 id="tourTitle">Ninh Bình — Tuyệt tác Di sản Tràng An &amp; Hang Múa</h1>
+      <div class="tour-head-meta">
+        <span class="meta-badge" id="tourRating"><i data-icon="star"></i> 4.9/5 · 168 đánh giá</span>
+        <span class="meta-badge" id="tourDurationBadge"><i data-icon="clock"></i> Thời lượng: 1 ngày</span>
+        <span class="meta-badge"><i data-icon="bus"></i> Xe Limousine đón trả tận nơi</span>
+        <span class="meta-badge highlight" id="tourBuffetPill"><i data-icon="utensils"></i> Buffet đặc sản miễn phí</span>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="tour-gallery">
+      <div class="tour-gallery-main">
+        <img id="galleryMainImg" src="images/tour1.png" alt="Tour chính">
+      </div>
+      <div class="tour-gallery-side">
+        <img id="gallerySide1" src="images/tour-b.png" alt="Ảnh tour 1">
+        <img id="gallerySide2" src="images/tour-c.png" alt="Ảnh tour 2">
+      </div>
+    </section>
+
+    <!-- TWO COLUMN LAYOUT: CONTENT + STICKY BOOKING -->
+    <div class="tour-layout">
+      <!-- LEFT CONTENT COLUMN -->
+      <div class="tour-main-content">
+        <!-- AMENITIES & BUFFET HIGHLIGHTS -->
+        <div class="tour-perks-banner">
+          <h3>Đặc quyền dịch vụ &amp; Ẩm thực trọn gói</h3>
+          <div class="perks-grid">
+            <div class="perk-item highlight-buffet">
+              <div class="perk-icon-box"><i data-icon="utensils"></i></div>
+              <div class="perk-text">
+                <b id="buffetTitle">Buffet miễn phí trọn gói</b>
+                <p id="buffetDesc">Thưởng thức tiệc buffet đặc sản địa phương không giới hạn với thực đơn tươi ngon
+                  chuẩn 4-5 sao.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon-box"><i data-icon="bus"></i></div>
+              <div class="perk-text">
+                <b>Xe đưa đón Limousine</b>
+                <p>Xe Dcar cao cấp, ghế massage êm ái, cổng sạc điện thoại &amp; Wi-Fi miễn phí suốt tuyến.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon-box"><i data-icon="ticket"></i></div>
+              <div class="perk-text">
+                <b>Vé thắng cảnh &amp; Thuyền VIP</b>
+                <p>Bao gồm 100% vé tham quan, thuyền nan hoặc du thuyền, cáp treo không phải xếp hàng chờ đợi.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon-box"><i data-icon="user"></i></div>
+              <div class="perk-text">
+                <b>Hướng dẫn viên chuyên nghiệp</b>
+                <p>Đồng hành, am hiểu văn hóa lịch sử bản địa, nhiệt tình hỗ trợ chụp ảnh kỷ niệm.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon-box"><i data-icon="shield"></i></div>
+              <div class="perk-text">
+                <b>Bảo hiểm du lịch 50.000.000₫</b>
+                <p>Bảo hiểm du lịch toàn diện bảo vệ mọi hành khách trong suốt thời gian chuyến đi.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon-box"><i data-icon="droplet"></i></div>
+              <div class="perk-text">
+                <b>Nước suối &amp; Quà tặng lưu niệm</b>
+                <p>Cung cấp nước khoáng chai, khăn lạnh mỗi ngày cùng quà tặng lưu niệm từ Dahlia Travel.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="stop"><time>10:00</time>
-          <div><b>Hoa Lư &amp; bữa trưa địa phương</b>
-            <p>Khám phá cố đô cùng hướng dẫn viên, thưởng thức bữa trưa với hương vị đặc trưng Ninh Bình.</p>
+
+        <!-- ITINERARY TIMELINE -->
+        <div class="itinerary-sec">
+          <h3 id="itineraryHeadTitle">Lịch trình chi tiết chuyến đi</h3>
+          <div class="itinerary-timeline" id="itineraryContainer">
+            <!-- Rendered dynamically by JavaScript -->
           </div>
         </div>
-        <div class="stop"><time>13:00</time>
-          <div><b>Du ngoạn Tràng An</b>
-            <p>Ngồi thuyền qua sông xanh, hang động và những dãy núi đá vôi. Thời gian trên thuyền khoảng 2 giờ.</p>
+
+        <!-- INCLUSIONS & EXCLUSIONS -->
+        <div class="inc-exc-sec">
+          <div class="inc-box">
+            <h4><span style="color:var(--green)"><i data-icon="check"></i></span> Giá tour bao gồm</h4>
+            <ul id="inclusionsList">
+              <!-- Rendered dynamically -->
+            </ul>
+          </div>
+          <div class="exc-box">
+            <h4><span style="color:var(--red)"><i data-icon="close"></i></span> Chưa bao gồm</h4>
+            <ul id="exclusionsList">
+              <!-- Rendered dynamically -->
+            </ul>
           </div>
         </div>
-        <div class="stop"><time>15:30</time>
-          <div><b>Hang Múa &amp; trở về</b>
-            <p>Chinh phục bậc đá để ngắm toàn cảnh. Trở lại Hà Nội khoảng 19:00, tùy điều kiện giao thông.</p>
-          </div>
+
+        <!-- CANCELLATION POLICY -->
+        <div class="tour-perks-banner" style="background:var(--sand)">
+          <h3 style="font-size:18px">Chính sách hủy đổi &amp; Lưu ý chuẩn bị</h3>
+          <p class="small" style="font-size:13px;color:var(--muted);line-height:1.7">
+            • <b>Hủy trước 48 giờ:</b> Hoàn tiền 100% miễn phí không thu bất kỳ phụ phí nào.<br>
+            • <b>Hủy từ 24 - 48 giờ trước khởi hành:</b> Tính 50% tổng chi phí tour.<br>
+            • <b>Hủy trong vòng 24 giờ hoặc vắng mặt:</b> Tính 100% chi phí.<br>
+            • <b>Lưu ý trang phục:</b> Quý khách nên mang giày thể thao thoải mái, nón mũ, kem chống nắng và giấy tờ tùy
+            thân (CCCD/Hộ chiếu).
+          </p>
         </div>
       </div>
-      <div class="inc">
-        <div class="a"><b>Giá tour bao gồm</b>
-          <ul>
-            <li>✓ Xe đưa đón khứ hồi</li>
-            <li>✓ Hướng dẫn viên tiếng Việt</li>
-            <li>✓ Vé tham quan &amp; thuyền Tràng An</li>
-            <li>✓ Bữa trưa, 1 chai nước / khách</li>
-            <li>✓ Thuế &amp; phí dịch vụ</li>
-          </ul>
+
+      <!-- RIGHT COLUMN: STICKY TOUR BOOKING SIDEBAR -->
+      <aside class="tour-booking-sidebar" id="bookingSidebar">
+        <form class="booking-card" id="tourBookingForm" onsubmit="event.preventDefault(); handleOpenCheckout();">
+          <div class="booking-card-head">
+            <span class="price-lead">Giá trọn gói trực tiếp</span>
+            <div class="main-price">
+              <span id="displayAdultPrice">1.250.000 ₫</span>
+              <small>/ khách lớn</small>
+            </div>
+            <div style="font-size:12px;color:var(--green);font-weight:600;margin-top:4px;">
+              <i data-icon="check"></i> Cam kết không phát sinh · Bữa ăn buffet miễn phí
+            </div>
+          </div>
+
+          <!-- DATES PICKER (NGÀY ĐI & NGÀY KẾT THÚC MẶC ĐỊNH) -->
+          <div class="booking-dates-box">
+            <div class="booking-dates-row">
+              <div class="date-col">
+                <label for="startDateInput">
+                  <span><i data-icon="calendar"></i> Ngày khởi hành *</span>
+                </label>
+                <input type="date" id="startDateInput" required onchange="handleStartDateChange()">
+              </div>
+              <div class="date-col">
+                <label>
+                  <span><i data-icon="flag"></i> Ngày về</span>
+                  <span class="badge-auto">Tự động</span>
+                </label>
+                <div class="date-display-end" id="endDateDisplay">
+                  <span class="end-date-val">20/11/2026</span>
+                  <span class="end-day-tag">Thứ Sáu</span>
+                </div>
+              </div>
+            </div>
+            <div class="duration-tag-badge" id="durationInfoBadge">
+              <span><i data-icon="clock"></i> Lịch trình: <b>1 ngày</b></span>
+              <span style="color:var(--green);font-size:11px;font-weight:600"><i data-icon="check"></i> Về trong ngày</span>
+            </div>
+          </div>
+
+          <!-- GUESTS SELECTOR -->
+          <div class="guests-selector">
+            <div class="guest-field">
+              <label>Người lớn (&gt; 10 tuổi)</label>
+              <div class="guest-counter-input">
+                <button type="button" onclick="updateGuests('adults', -1)">−</button>
+                <input type="number" id="adultCount" value="2" min="1" max="50" readonly>
+                <button type="button" onclick="updateGuests('adults', 1)">+</button>
+              </div>
+            </div>
+            <div class="guest-field">
+              <label>Trẻ em (5–9 tuổi - 75%)</label>
+              <div class="guest-counter-input">
+                <button type="button" onclick="updateGuests('children', -1)">−</button>
+                <input type="number" id="childCount" value="0" min="0" max="20" readonly>
+                <button type="button" onclick="updateGuests('children', 1)">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CUSTOMER DETAILS (TÊN, SỐ ĐIỆN THOẠI WAPUS, EMAIL, GHI CHÚ) -->
+          <div class="customer-fields-group">
+            <div class="c-field">
+              <label for="custName"><i data-icon="user"></i> Họ và tên người đặt <span class="req">*</span></label>
+              <input type="text" id="custName" placeholder="Ví dụ: Nguyễn Minh Anh" value="Nguyễn Minh Anh" required>
+            </div>
+
+            <div class="c-field">
+              <label for="custPhone"><i data-icon="phone"></i> Số điện thoại / Wapus <span class="req">*</span></label>
+              <input type="tel" id="custPhone" placeholder="Ví dụ: 0912 345 678" value="0912 345 678" required>
+            </div>
+
+            <div class="c-field">
+              <label for="custEmail"><i data-icon="mail"></i> Thư điện tử (Email) <span class="req">*</span></label>
+              <input type="email" id="custEmail" placeholder="email@example.com" value="minhanh@example.com" required>
+            </div>
+
+            <div class="c-field">
+              <label for="custNotes"><i data-icon="chat"></i> Ghi chú chuyến đi (Yêu cầu đặc biệt)</label>
+              <textarea id="custNotes"
+                placeholder="Điểm đón cụ thể, ăn chay, số ghế mong muốn...">Đón tại The Dahlia Hanoi. Hỗ trợ chuẩn bị bữa ăn không cay cho đoàn.</textarea>
+            </div>
+          </div>
+
+          <!-- PROMO CODE / MÃ GIẢM GIÁ -->
+          <div class="coupon-box">
+            <label style="font-size:12px;font-weight:600;color:var(--ink)"><i data-icon="tag"></i> Mã giảm giá (Coupon)</label>
+            <div class="coupon-input-row">
+              <input type="text" id="couponInput" placeholder="Ví dụ: DAHLIA10, MIXIVIVU, TRANGNAU" value="DAHLIA10">
+              <button type="button" onclick="applyCoupon()">Áp dụng</button>
+            </div>
+            <div class="coupon-feedback" id="couponFeedback">✓ Đã áp dụng mã DAHLIA10: Giảm 10%!</div>
+          </div>
+
+          <!-- LIVE PRICING BREAKDOWN (TỔNG TIỀN TOUR) -->
+          <div class="pricing-breakdown">
+            <div class="pricing-row">
+              <span id="priceFormulaAdults">2 người lớn × 1.250.000 ₫</span>
+              <span id="totalAdultsCost">2.500.000 ₫</span>
+            </div>
+            <div class="pricing-row" id="childPricingRow" style="display:none">
+              <span id="priceFormulaChildren">0 trẻ em × 937.500 ₫</span>
+              <span id="totalChildrenCost">0 ₫</span>
+            </div>
+            <div class="pricing-row" style="color:var(--green)">
+              <span>Buffet &amp; Bữa ăn đặc sản</span>
+              <span>Miễn phí (0 ₫)</span>
+            </div>
+            <div class="pricing-row discount-row" id="discountRow">
+              <span id="discountLabel">Mã giảm giá DAHLIA10 (-10%)</span>
+              <span id="discountAmount">−250.000 ₫</span>
+            </div>
+            <div class="pricing-row total-row">
+              <span>Tổng tiền tour</span>
+              <span class="total-amount" id="grandTotalDisplay">2.250.000 ₫</span>
+            </div>
+          </div>
+
+          <!-- SUBMIT / THANH TOÁN BUTTON -->
+          <button type="submit" class="btn checkout-btn">
+            Tiến hành thanh toán <img src="images/arrow-w.svg" alt="">
+          </button>
+
+          <div class="guarantee-note">
+            <i data-icon="lock"></i> Xác nhận tức thì · Hỗ trợ tư vấn qua Wapus 24/7
+          </div>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ===================================================
+       CHECKOUT & PAYMENT MODAL (Phong cách MixiVivu)
+       =================================================== -->
+  <div class="checkout-modal-backdrop" id="checkoutModalBackdrop" onclick="handleBackdropClick(event)">
+    <div class="checkout-modal" id="checkoutModal">
+      <!-- MODAL HEADER -->
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" style="font-size:10px">Thanh toán an toàn</span>
+          <h3 id="modalTourTitle">Xác nhận &amp; Thanh toán Tour</h3>
         </div>
-        <div class="b"><b>Chi phí tự túc</b>
-          <ul>
-            <li>• Đồ uống ngoài thực đơn</li>
-            <li>• Chi tiêu cá nhân</li>
-            <li>• Tiền tip (không bắt buộc)</li>
-          </ul>
-        </div>
+        <button type="button" class="modal-close-btn" onclick="closeCheckoutModal()" aria-label="Đóng">
+          <i data-icon="close"></i>
+        </button>
       </div>
-      <div class="sec">
-        <h3>Chuẩn bị cho chuyến đi</h3>
-        <p style="font-size:14px">Mang giày đi bộ, mũ, kem chống nắng và nước uống. Hang Múa có nhiều bậc thang; bạn có
-          thể nghỉ tại chân núi nếu không muốn leo. Trẻ dưới 5 tuổi: liên hệ để được tư vấn.</p>
-        <hr class="l">
-        <b style="font-size:15px">Điều kiện thay đổi &amp; hủy</b>
-        <p style="font-size:13px">Chính sách mẫu: miễn phí hủy trước 48 giờ; hủy từ 24–48 giờ tính 50%; dưới 24 giờ tính
-          100%. Lịch trình có thể điều chỉnh do thời tiết. Mọi thay đổi sẽ được thông báo trước.</p>
-        <a class="btn alt" style="align-self:flex-start" href="contact.html">Hỏi thêm về tour này <img
-            src="images/arrow-b.svg" alt=""></a>
+
+      <!-- VIEW 1: PAYMENT METHOD VIEW -->
+      <div class="modal-body" id="modalPaymentView">
+        <!-- ORDER SUMMARY -->
+        <div class="order-summary-box">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="order-code-badge"><i data-icon="ticket"></i> Mã Booking: <b id="summaryBookingCode">DHL-8924</b></span>
+            <span style="font-size:12px;color:var(--brown);font-weight:600" id="summaryDestTag">Ninh Bình</span>
+          </div>
+          <div class="order-detail-grid">
+            <div>
+              <span class="lbl">Họ tên người đặt:</span>
+              <span class="val" id="summaryCustName">Nguyễn Minh Anh</span>
+            </div>
+            <div>
+              <span class="lbl">Số Wapus / SĐT:</span>
+              <span class="val" id="summaryCustPhone">0912 345 678</span>
+            </div>
+            <div>
+              <span class="lbl">Ngày khởi hành:</span>
+              <span class="val" id="summaryStartDate">20/11/2026</span>
+            </div>
+            <div>
+              <span class="lbl">Ngày kết thúc tour:</span>
+              <span class="val" id="summaryEndDate">20/11/2026</span>
+            </div>
+            <div>
+              <span class="lbl">Số lượng khách:</span>
+              <span class="val" id="summaryGuests">2 Người lớn</span>
+            </div>
+            <div>
+              <span class="lbl">Tiện ích đặc quyền:</span>
+              <span class="val" style="color:var(--green)">Bao gồm Buffet miễn phí</span>
+            </div>
+          </div>
+          <div class="order-total-highlight">
+            <span>Tổng thanh toán cần chuyển:</span>
+            <span class="amt" id="summaryTotalAmount">2.250.000 ₫</span>
+          </div>
+        </div>
+
+        <!-- PAYMENT METHOD TABS -->
+        <div class="payment-tabs">
+          <button type="button" class="pay-tab-btn active" onclick="switchPayTab('vietqr')">
+            <span class="icon"><i data-icon="smartphone"></i></span>
+            <span>Quét VietQR</span>
+          </button>
+          <button type="button" class="pay-tab-btn" onclick="switchPayTab('bank')">
+            <span class="icon"><i data-icon="landmark"></i></span>
+            <span>Chuyển khoản</span>
+          </button>
+          <button type="button" class="pay-tab-btn" onclick="switchPayTab('momo')">
+            <span class="icon"><i data-icon="wallet"></i></span>
+            <span>Ví MoMo</span>
+          </button>
+          <button type="button" class="pay-tab-btn" onclick="switchPayTab('card')">
+            <span class="icon"><i data-icon="creditCard"></i></span>
+            <span>Thẻ tín dụng</span>
+          </button>
+        </div>
+
+        <!-- PAYMENT CONTENT BOX -->
+        <div class="payment-content-box">
+          <!-- TAB 1: VIETQR (Khuyên dùng) -->
+          <div id="payContentVietQR" class="vietqr-view">
+            <div class="qr-code-holder">
+              <img id="vietqrImage" src="" alt="Mã VietQR thanh toán">
+              <span style="font-size:10px;color:var(--muted);margin-top:4px">Quét bằng app ngân hàng bất kỳ</span>
+            </div>
+            <div class="qr-instructions">
+              <div class="bank-pill">
+                <span>Ngân hàng Quân Đội (MB Bank)</span>
+              </div>
+              <div class="copy-row">
+                <span>Số tài khoản: <b id="qrBankAcc">9999888868888</b></span>
+                <button type="button" class="copy-btn" onclick="copyText('9999888868888', 'Số tài khoản')">Sao chép</button>
+              </div>
+              <div class="copy-row">
+                <span>Chủ tài khoản: <b>CONG TY DU LICH THE DAHLIA</b></span>
+                <button type="button" class="copy-btn"
+                  onclick="copyText('CONG TY DU LICH THE DAHLIA', 'Tên chủ tài khoản')">Sao chép</button>
+              </div>
+              <div class="copy-row">
+                <span>Số tiền: <b id="qrMoneyVal">2.250.000 ₫</b></span>
+                <button type="button" class="copy-btn" onclick="copyMoney()">Sao chép</button>
+              </div>
+              <div class="copy-row">
+                <span>Nội dung chuyển khoản: <b id="qrTransferNote">DHL8924 0912345678</b></span>
+                <button type="button" class="copy-btn"
+                  onclick="copyText(document.getElementById('qrTransferNote').innerText, 'Nội dung chuyển khoản')">Sao chép</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: BANK TRANSFER -->
+          <div id="payContentBank" style="display:none">
+            <table class="bank-info-table">
+              <tr>
+                <td>Ngân hàng:</td>
+                <td><b>Ngân hàng Ngoại Thương Việt Nam (Vietcombank)</b></td>
+              </tr>
+              <tr>
+                <td>Số tài khoản:</td>
+                <td>
+                  <b style="color:var(--brown)">0011004455668</b>
+                  <button type="button" class="copy-btn"
+                    onclick="copyText('0011004455668', 'Số tài khoản Vietcombank')">Sao chép</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Chủ tài khoản:</td>
+                <td><b>CONG TY DU LICH THE DAHLIA VIETNAM</b></td>
+              </tr>
+              <tr>
+                <td>Chi nhánh:</td>
+                <td>Sở Giao Dịch Hà Nội</td>
+              </tr>
+              <tr>
+                <td>Nội dung:</td>
+                <td><b id="bankTransferNoteText">DHL8924 0912345678</b></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- TAB 3: MOMO -->
+          <div id="payContentMomo" style="display:none" class="sim-pay-box">
+            <div
+              style="display:flex;align-items:center;gap:14px;background:#fdf0f4;padding:12px 16px;border-radius:8px">
+              <span class="m-icon-lg" style="color:#b0006d"><i data-icon="wallet"></i></span>
+              <div>
+                <b style="color:#b0006d">Ví điện tử MoMo</b>
+                <p class="small">Chuyển tiền MoMo tới số đại lý du lịch Dahlia Travel</p>
+              </div>
+            </div>
+            <div class="copy-row">
+              <span>Số MoMo: <b>0988 888 888</b> (Nguyễn Văn Dahlia)</span>
+              <button type="button" class="copy-btn" onclick="copyText('0988888888', 'Số điện thoại MoMo')">Sao chép</button>
+            </div>
+            <div class="copy-row">
+              <span>Lời nhắn: <b id="momoTransferNote">DHL8924</b></span>
+              <button type="button" class="copy-btn"
+                onclick="copyText(document.getElementById('momoTransferNote').innerText, 'Lời nhắn MoMo')">Sao chép</button>
+            </div>
+          </div>
+
+          <!-- TAB 4: CREDIT CARD -->
+          <div id="payContentCard" style="display:none" class="sim-pay-box">
+            <div class="sim-card-form">
+              <div class="full c-field">
+                <label>Số thẻ Visa / Mastercard</label>
+                <input type="text" placeholder="4111 •••• •••• 1111" value="4111 2222 3333 4444">
+              </div>
+              <div class="c-field">
+                <label>Tên trên thẻ</label>
+                <input type="text" placeholder="NGUYEN MINH ANH" value="NGUYEN MINH ANH">
+              </div>
+              <div class="c-field">
+                <label>Hạn thẻ &amp; CVV</label>
+                <input type="text" placeholder="12/28 - 888" value="12/28 - 888">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONFIRM PAYMENT BUTTON -->
+        <button type="button" class="btn checkout-btn" onclick="completePayment()">
+          <i data-icon="check"></i> Tôi đã thanh toán / Xác nhận đặt tour <img src="images/arrow-w.svg" alt="">
+        </button>
+      </div>
+
+      <!-- VIEW 2: PAYMENT SUCCESS CONFIRMATION VIEW -->
+      <div class="modal-body payment-success-view" id="modalSuccessView">
+        <div class="success-check-circle"><i data-icon="check"></i></div>
+        <h3>Đặt Tour Thành Công!</h3>
+        <p class="lead" style="font-size:14.5px;max-width:500px">
+          Cảm ơn Quý khách <b id="successCustName" style="color:var(--brown-dark)">Nguyễn Minh Anh</b> đã tin tưởng và
+          đồng hành cùng The Dahlia Travel.
+        </p>
+
+        <!-- PRINTABLE VOUCHER CARD -->
+        <div class="success-voucher-card">
+          <div
+            style="display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:8px">
+            <b>PHIẾU XÁC NHẬN ĐẶT TOUR &amp; VÉ ĐIỆN TỬ</b>
+            <span style="color:var(--brown);font-weight:700" id="successVoucherCode">MÃ: DHL-8924</span>
+          </div>
+          <div><b>Hành trình:</b> <span id="successTourName">Ninh Bình — Tuyệt tác Di sản Tràng An &amp; Hang Múa</span>
+          </div>
+          <div><b>Khởi hành:</b> <span id="successTourDates">20/11/2026 → 20/11/2026 (1 ngày)</span></div>
+          <div><b>Số lượng khách:</b> <span id="successTourGuests">2 Người lớn</span></div>
+          <div><b>Tổng tiền thanh toán:</b> <span id="successTourTotal"
+              style="color:var(--brown);font-weight:700">2.250.000 ₫</span></div>
+          <div><b>Đặc quyền dịch vụ:</b> <span style="color:var(--green);font-weight:600">Bao gồm tiệc Buffet đặc sản +
+              Xe Limousine đưa đón</span></div>
+          <div style="font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px">
+            <i data-icon="phone"></i> Nhân viên tư vấn của The Dahlia sẽ liên hệ với Quý khách qua Wapus / Số điện thoại <b
+              id="successCustPhone">0912 345 678</b> trong vòng 10 phút để chốt điểm đón và gửi hướng dẫn chi tiết.
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <button type="button" class="btn alt" onclick="window.print()"><i data-icon="printer"></i> In phiếu xác nhận</button>
+          <a class="btn" id="successWapusBtn" href="https://wa.me/84988888888" target="_blank">
+            <i data-icon="chat"></i> Trò chuyện Wapus / Zalo ngay
+          </a>
+        </div>
+        <button type="button" class="btn alt sm" style="width:100%" onclick="closeCheckoutModal()">
+          Đóng và quay lại
+        </button>
       </div>
     </div>
-    <aside class="book">
-      <form class="box" onsubmit="return false">
-        <p class="eyebrow">Chọn ngày &amp; đặt tour</p>
-        <p class="big">1.250.000 ₫ <small>/ người lớn</small></p>
-        <p class="small" style="font-size:12px">Trọn gói 1 ngày · Khởi hành từ Hà Nội</p>
-        <div class="field"><label for="dd">Ngày khởi hành</label><select id="dd">
-            <option>20/11/2026 · Thứ Sáu</option>
-          </select></div>
-        <div class="dates"><button type="button">19/11<small>Còn chỗ</small></button><button type="button"
-            class="on">20/11<small>Còn chỗ</small></button><button type="button">21/11<small>Còn chỗ</small></button>
-        </div>
-        <div class="two">
-          <div class="field"><label for="ad">Người lớn (từ 10 tuổi)</label><input id="ad" type="number" value="2"></div>
-          <div class="field"><label for="ch">Trẻ em (5–9 tuổi)</label><input id="ch" type="number" value="0"></div>
-        </div>
-        <p class="ok okbox">✓ Còn 8 chỗ cho ngày bạn chọn · Dữ liệu mẫu</p>
-        <hr class="l">
-        <div class="pr"><span>2 người lớn × 1.250.000 ₫</span><span>2.500.000 ₫</span></div>
-        <div class="pr"><span>Ưu đãi đặt trực tiếp</span><span>−100.000 ₫</span></div>
-        <div class="pr"><span>Thuế &amp; phí dịch vụ</span><span>Đã bao gồm</span></div>
-        <hr class="l">
-        <div class="pr t"><span>Tổng thanh toán</span><span>2.400.000 ₫</span></div>
-        <p class="small">Không có phí ẩn · Áp dụng cho 2 khách</p>
-        <b style="font-size:15px">Thông tin người đặt</b>
-        <div class="field"><label for="n1">Họ và tên *</label><input id="n1" type="text" value="Nguyễn Minh Anh"></div>
-        <div class="field"><label for="n2">Email *</label><input id="n2" type="email" value="minhanh@example.com"></div>
-        <div class="field"><label for="n3">Số điện thoại *</label><input id="n3" type="tel" value="0912 345 678"></div>
-        <label class="agree"><input type="checkbox"><span>Tôi đồng ý với điều kiện đặt chỗ và chính sách bảo mật thông
-            tin.</span></label>
-        <button class="btn" type="submit">Đặt tour · 2.400.000 ₫ <img src="images/arrow-w.svg" alt=""></button>
-        <p class="small">Nhận thông tin xác nhận qua email. Đây là giao diện minh họa, không thu tiền.</p>
-      </form>
-      <p class="small" style="font-size:12px">Bạn muốn đi riêng? <a href="contact.html"
-          style="text-decoration:underline">Gửi yêu cầu</a> để nhận lịch trình và báo giá phù hợp.</p>
-    </aside>
-  </section>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notice" id="toastNotice">
+    <span id="toastIcon"><i data-icon="check"></i></span>
+    <span id="toastMsg">Thông báo</span>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="fcols">
       <div>
-        <p class="brand">THE DAHLIA HANOI.</p>
-        <p style="font-size:10px;color:var(--brown)">HOTEL &amp; APARTMENT</p>
-        <p>Một chốn nghỉ an yên. Một hành trình đáng nhớ.</p>
+        <p class="brand">THE DAHLIA TRAVEL.</p>
+        <p style="font-size:11px;color:var(--brown);font-weight:600">CÔNG TY DU LỊCH &amp; NGHỈ DƯỠNG CAO CẤP</p>
+        <p style="font-size:13px;line-height:1.6">Đơn vị chuyên tổ chức tour trải nghiệm tinh hoa miền Bắc: Ninh Bình,
+          Hà Giang, Sapa, Hà Nội, Hạ Long với dịch vụ chuẩn 4-5 sao và tiệc buffet miễn phí trọn gói.</p>
       </div>
-      <div><b>Hành trình của bạn</b>
-        <p>Khám phá tour · Phòng &amp; căn hộ</p>
-        <p>Gửi yêu cầu · Điều kiện đặt chỗ</p>
+      <div>
+        <b>Các tour nổi bật</b>
+        <p><a href="javascript:void(0)" onclick="switchTour('ninh-binh')">Tour Ninh Bình 1 ngày</a></p>
+        <p><a href="javascript:void(0)" onclick="switchTour('ha-giang')">Tour Hà Giang 3N2Đ</a></p>
+        <p><a href="javascript:void(0)" onclick="switchTour('sapa')">Tour Sapa Fansipan 2N1Đ</a></p>
+        <p><a href="javascript:void(0)" onclick="switchTour('ha-noi')">Tour Hà Nội City &amp; Food</a></p>
+        <p><a href="javascript:void(0)" onclick="switchTour('ha-long')">Du thuyền 5 Sao Hạ Long</a></p>
       </div>
-      <div><b>Liên hệ tư vấn</b>
-        <p>booking@dahlia.example</p>
-        <p>+84 24 0000 0000 · Hà Nội, Việt Nam</p>
-        <p class="copy">Thông tin</p>
+      <div>
+        <b>Hỗ trợ khách hàng</b>
+        <p><a href="tour.html">Khám phá tour</a></p>
+        <p><a href="booking.html">Đặt phòng nghỉ</a></p>
+        <p><a href="contact.html">Liên hệ tư vấn</a></p>
+        <p><a href="tour.html">Chính sách hủy đổi</a></p>
+      </div>
+      <div>
+        <b>Liên hệ 24/7</b>
+        <p><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></p>
+        <p><i data-icon="chat"></i> Wapus / Zalo: <b>0988 888 888</b></p>
+        <p><i data-icon="mail"></i> Email: <b>booking@dahlia.travel</b></p>
+        <p><i data-icon="mapPin"></i> Địa chỉ: Hoàn Kiếm, Hà Nội, Việt Nam</p>
       </div>
     </div>
     <hr>
-    <p class="copy">© 2026 THE DAHLIA HANOI.</p>
+    <div class="footer-bottom">
+      <span>© 2026 THE DAHLIA TRAVEL. Tất cả quyền được bảo lưu. Giấy phép kinh doanh lữ hành số: 01-1234/2026/TCDL-GP
+        LHQT.</span>
+    </div>
   </footer>
+
+  <!-- SCRIPT DATA & LOGIC -->
+  <script src="tours-data.js"></script>
+  <script>
+    // State của trang
+    let currentTourId = "ninh-binh";
+    let currentDiscount = { type: "percent", value: 10, label: "Giảm 10% (DAHLIA10)" };
+    let currentBookingCode = "";
+    let calculatedGrandTotal = 0;
+
+    // Khởi tạo trang
+    document.addEventListener("DOMContentLoaded", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const requestedTour = urlParams.get("tour");
+      if (requestedTour && TOURS_DATA[requestedTour]) {
+        currentTourId = requestedTour;
+      }
+
+      const requestedCoupon = urlParams.get("coupon");
+      if (requestedCoupon) {
+        setTimeout(function () {
+          quickApplyCoupon(requestedCoupon);
+        }, 300);
+      }
+
+      // Đặt ngày khởi hành mặc định là 2 ngày sau
+      const defaultStart = new Date();
+      defaultStart.setDate(defaultStart.getDate() + 2);
+      const yyyy = defaultStart.getFullYear();
+      const mm = String(defaultStart.getMonth() + 1).padStart(2, '0');
+      const dd = String(defaultStart.getDate()).padStart(2, '0');
+      document.getElementById("startDateInput").value = `${yyyy}-${mm}-${dd}`;
+
+      // Render tour hiện tại
+      renderTourPage(currentTourId);
+    });
+
+    // Chuyển đổi giữa các tour
+    function switchTour(tourId) {
+      if (!TOURS_DATA[tourId]) return;
+      currentTourId = tourId;
+
+      document.querySelectorAll(".tour-switch-pill").forEach(pill => {
+        pill.classList.toggle("active", pill.dataset.tour === tourId);
+      });
+
+      if (window.history.pushState) {
+        const newUrl = window.location.pathname + "?tour=" + tourId;
+        window.history.pushState({ path: newUrl }, "", newUrl);
+      }
+
+      renderTourPage(tourId);
+      showToast("Đã tải thông tin: " + TOURS_DATA[tourId].name);
+    }
+
+    // Render thông tin tour lên giao diện
+    function renderTourPage(tourId) {
+      const tour = TOURS_DATA[tourId];
+      if (!tour) return;
+
+      // Header & Breadcrumb
+      document.getElementById("tourCrumbDest").innerText = tour.destination;
+      document.getElementById("tourTitle").innerText = tour.name;
+      document.getElementById("tourRating").innerHTML = `<i data-icon="star"></i> ${tour.rating}/5 · ${tour.reviewsCount} đánh giá`;
+      document.getElementById("tourDurationBadge").innerHTML = `<i data-icon="clock"></i> Thời lượng: ${tour.duration}`;
+      document.getElementById("tourBuffetPill").innerHTML = `<i data-icon="utensils"></i> ${tour.buffetHighlight}`;
+
+      // Gallery
+      document.getElementById("galleryMainImg").src = tour.gallery[0] || tour.image;
+      document.getElementById("gallerySide1").src = tour.gallery[1] || tour.gallery[0];
+      document.getElementById("gallerySide2").src = tour.gallery[2] || tour.gallery[0];
+
+      // Buffet & Perks
+      document.getElementById("buffetTitle").innerText = tour.buffetHighlight;
+      document.getElementById("buffetDesc").innerText = tour.buffetDetail;
+
+      // Itinerary
+      document.getElementById("itineraryHeadTitle").innerText = `Lịch trình chi tiết: ${tour.duration}`;
+      const itineraryContainer = document.getElementById("itineraryContainer");
+      itineraryContainer.innerHTML = tour.itinerary.map(item => `
+        <div class="itinerary-stop">
+          <span class="time-tag">${item.time}</span>
+          <h4>${item.title}</h4>
+          <p>${item.desc}</p>
+        </div>
+      `).join("");
+
+      // Inclusions & Exclusions with minimalist line icons
+      document.getElementById("inclusionsList").innerHTML = tour.inclusions.map(inc => `
+        <li><span class="m-icon check"><i data-icon="check"></i></span> ${inc}</li>
+      `).join("");
+
+      document.getElementById("exclusionsList").innerHTML = tour.exclusions.map(exc => `
+        <li><span class="m-icon close" style="color:var(--red)"><i data-icon="close"></i></span> ${exc}</li>
+      `).join("");
+
+      // Cập nhật giá gốc & bảng tính toán
+      document.getElementById("displayAdultPrice").innerText = formatCurrency(tour.price);
+      document.getElementById("durationInfoBadge").innerHTML = `<span><i data-icon="clock"></i> Lịch trình: <b>${tour.duration}</b></span>`;
+
+      // Cập nhật ngày kết thúc mặc định
+      updateDatesCalculation();
+
+      // Tính lại tổng tiền tour
+      calculateTourTotal();
+
+      // Render lại line icons cho các node mới sinh
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons();
+      }
+    }
+
+    // Xử lý thay đổi ngày khởi hành -> Tính lại ngày kết thúc
+    function handleStartDateChange() {
+      updateDatesCalculation();
+    }
+
+    // Tính toán ngày kết thúc dựa vào ngày khởi hành và tour hiện tại
+    function updateDatesCalculation() {
+      const tour = TOURS_DATA[currentTourId];
+      const startDateVal = document.getElementById("startDateInput").value;
+      if (!startDateVal) return;
+
+      const endDateObj = calculateEndDate(startDateVal, tour.durationDays);
+      if (endDateObj) {
+        const formattedDate = formatDateVN(endDateObj);
+        const dayName = getDayNameVN(endDateObj);
+
+        document.getElementById("endDateDisplay").innerHTML = `
+          <span class="end-date-val">${formattedDate}</span>
+          <span class="end-day-tag">${dayName}</span>
+        `;
+
+        const badgeDuration = document.getElementById("durationInfoBadge");
+        if (badgeDuration) {
+          const detailTag = tour.durationDays > 1 ? `Khởi hành ${formatDateVN(new Date(startDateVal))} → Về ${formattedDate}` : `Khởi hành &amp; về trong ngày`;
+          badgeDuration.innerHTML = `
+            <span><i data-icon="clock"></i> Lịch trình: <b>${tour.duration}</b></span>
+            <span style="color:var(--green);font-size:11px;font-weight:600"><i data-icon="check"></i> ${detailTag}</span>
+          `;
+          if (typeof renderLineIcons === 'function') renderLineIcons(badgeDuration);
+        }
+      }
+    }
+
+    // Tăng / giảm số lượng khách
+    function updateGuests(type, delta) {
+      if (type === 'adults') {
+        const input = document.getElementById("adultCount");
+        let val = parseInt(input.value) || 1;
+        val = Math.max(1, Math.min(50, val + delta));
+        input.value = val;
+      } else if (type === 'children') {
+        const input = document.getElementById("childCount");
+        let val = parseInt(input.value) || 0;
+        val = Math.max(0, Math.min(20, val + delta));
+        input.value = val;
+      }
+      calculateTourTotal();
+    }
+
+    // Áp dụng mã giảm giá
+    function applyCoupon() {
+      const code = document.getElementById("couponInput").value.trim().toUpperCase();
+      const feedback = document.getElementById("couponFeedback");
+
+      // Nhận diện mã giảm giá (tự động lấy từ site-config.js và PROMO_CODES)
+      const discount = (typeof getPromoCodeDetails === "function")
+        ? getPromoCodeDetails(code)
+        : ((typeof PROMO_CODES !== "undefined") ? PROMO_CODES[code] : null);
+
+      if (discount) {
+        currentDiscount = discount;
+        feedback.className = "coupon-feedback";
+        feedback.innerText = `✓ Đã áp dụng mã ${code}: ${currentDiscount.label}!`;
+        feedback.style.display = "block";
+        showToast(`Áp dụng thành công mã ${code}!`, "success");
+      } else {
+        currentDiscount = null;
+        feedback.className = "coupon-feedback error";
+        feedback.innerText = "✕ Mã giảm giá không hợp lệ hoặc đã hết lượt sử dụng.";
+        feedback.style.display = "block";
+        showToast("Mã giảm giá không hợp lệ!", "error");
+      }
+      calculateTourTotal();
+    }
+
+    function quickApplyCoupon(code) {
+      const input = document.getElementById("couponInput");
+      if (input) {
+        input.value = code;
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      applyCoupon();
+    }
+
+    // Tính toán tổng tiền tour theo thời gian thực
+    function calculateTourTotal() {
+      const tour = TOURS_DATA[currentTourId];
+      if (!tour) return;
+
+      const adults = parseInt(document.getElementById("adultCount").value) || 1;
+      const children = parseInt(document.getElementById("childCount").value) || 0;
+
+      const adultUnitPrice = tour.price;
+      const childUnitPrice = Math.round(tour.price * 0.75);
+
+      const adultTotal = adults * adultUnitPrice;
+      const childTotal = children * childUnitPrice;
+
+      document.getElementById("priceFormulaAdults").innerText = `${adults} người lớn × ${formatCurrency(adultUnitPrice)}`;
+      document.getElementById("totalAdultsCost").innerText = formatCurrency(adultTotal);
+
+      const childRow = document.getElementById("childPricingRow");
+      if (children > 0) {
+        childRow.style.display = "flex";
+        document.getElementById("priceFormulaChildren").innerText = `${children} trẻ em × ${formatCurrency(childUnitPrice)}`;
+        document.getElementById("totalChildrenCost").innerText = formatCurrency(childTotal);
+      } else {
+        childRow.style.display = "none";
+      }
+
+      const subtotal = adultTotal + childTotal;
+      let discountVal = 0;
+
+      const discountRow = document.getElementById("discountRow");
+      if (currentDiscount) {
+        discountRow.style.display = "flex";
+        if (currentDiscount.type === "percent") {
+          discountVal = Math.round((subtotal * currentDiscount.value) / 100);
+        } else {
+          discountVal = currentDiscount.value;
+        }
+        document.getElementById("discountLabel").innerText = currentDiscount.label;
+        document.getElementById("discountAmount").innerText = `−${formatCurrency(discountVal)}`;
+      } else {
+        discountRow.style.display = "none";
+      }
+
+      calculatedGrandTotal = Math.max(0, subtotal - discountVal);
+      document.getElementById("grandTotalDisplay").innerText = formatCurrency(calculatedGrandTotal);
+    }
+
+    // ===================================================
+    // CHECKOUT MODAL & THANH TOÁN LOGIC
+    // ===================================================
+
+    function handleOpenCheckout() {
+      const name = document.getElementById("custName").value.trim();
+      const phone = document.getElementById("custPhone").value.trim();
+      const email = document.getElementById("custEmail").value.trim();
+      const startDateVal = document.getElementById("startDateInput").value;
+
+      if (!name || !phone || !email || !startDateVal) {
+        showToast("Vui lòng điền đầy đủ Tên, Số điện thoại và Email!", "error");
+        return;
+      }
+
+      const tour = TOURS_DATA[currentTourId];
+      const adults = parseInt(document.getElementById("adultCount").value) || 1;
+      const children = parseInt(document.getElementById("childCount").value) || 0;
+
+      currentBookingCode = "DHL-" + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById("modalTourTitle").innerText = `Thanh toán: ${tour.name}`;
+      document.getElementById("summaryBookingCode").innerText = currentBookingCode;
+      document.getElementById("summaryDestTag").innerText = tour.destination;
+      document.getElementById("summaryCustName").innerText = name;
+      document.getElementById("summaryCustPhone").innerText = phone;
+
+      const startObj = new Date(startDateVal);
+      const endObj = calculateEndDate(startDateVal, tour.durationDays);
+      document.getElementById("summaryStartDate").innerText = formatDateVN(startObj);
+      document.getElementById("summaryEndDate").innerText = formatDateVN(endObj);
+
+      let guestsStr = `${adults} Người lớn`;
+      if (children > 0) guestsStr += `, ${children} Trẻ em`;
+      document.getElementById("summaryGuests").innerText = guestsStr;
+
+      const formattedTotal = formatCurrency(calculatedGrandTotal);
+      document.getElementById("summaryTotalAmount").innerText = formattedTotal;
+      document.getElementById("qrMoneyVal").innerText = formattedTotal;
+
+      const transferSyntax = `${currentBookingCode.replace("-", "")} ${phone.replace(/\s+/g, "")}`;
+      document.getElementById("qrTransferNote").innerText = transferSyntax;
+      document.getElementById("bankTransferNoteText").innerText = transferSyntax;
+      document.getElementById("momoTransferNote").innerText = currentBookingCode;
+
+      const vietqrUrl = `https://api.vietqr.io/image/970422-9999888868888-qUq8b1b.jpg?accountName=CONG%20TY%20DU%20LICH%20THE%20DAHLIA&amount=${calculatedGrandTotal}&addInfo=${encodeURIComponent(transferSyntax)}`;
+      document.getElementById("vietqrImage").src = vietqrUrl;
+
+      document.getElementById("modalPaymentView").style.display = "flex";
+      document.getElementById("modalSuccessView").style.display = "none";
+      document.getElementById("checkoutModalBackdrop").classList.add("open");
+      
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("checkoutModal"));
+      }
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById("checkoutModalBackdrop").classList.remove("open");
+    }
+
+    function handleBackdropClick(e) {
+      if (e.target.id === "checkoutModalBackdrop") {
+        closeCheckoutModal();
+      }
+    }
+
+    function switchPayTab(tabId) {
+      const tabs = ["vietqr", "bank", "momo", "card"];
+      tabs.forEach(t => {
+        const content = document.getElementById("payContent" + t.charAt(0).toUpperCase() + t.slice(1));
+        if (content) {
+          content.style.display = (t === tabId) ? ((t === "vietqr") ? "flex" : "block") : "none";
+        }
+      });
+
+      document.querySelectorAll(".pay-tab-btn").forEach((btn, idx) => {
+        btn.classList.toggle("active", tabs[idx] === tabId);
+      });
+      
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("checkoutModal"));
+      }
+    }
+
+    function completePayment() {
+      const tour = TOURS_DATA[currentTourId];
+      const name = document.getElementById("custName").value.trim();
+      const phone = document.getElementById("custPhone").value.trim();
+      const adults = parseInt(document.getElementById("adultCount").value) || 1;
+      const children = parseInt(document.getElementById("childCount").value) || 0;
+      const startDateVal = document.getElementById("startDateInput").value;
+      const startObj = new Date(startDateVal);
+      const endObj = calculateEndDate(startDateVal, tour.durationDays);
+
+      document.getElementById("modalPaymentView").style.display = "none";
+      document.getElementById("modalSuccessView").style.display = "flex";
+
+      document.getElementById("successCustName").innerText = name;
+      document.getElementById("successVoucherCode").innerText = "MÃ: " + currentBookingCode;
+      document.getElementById("successTourName").innerText = tour.name;
+      document.getElementById("successTourDates").innerText = `${formatDateVN(startObj)} → ${formatDateVN(endObj)} (${tour.duration})`;
+
+      let guestsStr = `${adults} Người lớn`;
+      if (children > 0) guestsStr += `, ${children} Trẻ em`;
+      document.getElementById("successTourGuests").innerText = guestsStr;
+      document.getElementById("successTourTotal").innerText = formatCurrency(calculatedGrandTotal);
+      document.getElementById("successCustPhone").innerText = phone;
+
+      const wapusMsg = encodeURIComponent(`Xin chào Dahlia Travel, tôi vừa đặt tour ${tour.name} với mã booking: ${currentBookingCode}. Số tiền ${formatCurrency(calculatedGrandTotal)}. Vui lòng xác nhận giúp tôi!`);
+      document.getElementById("successWapusBtn").href = `https://wa.me/84988888888?text=${wapusMsg}`;
+
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("modalSuccessView"));
+      }
+
+      showToast("Đặt tour thành công! Cảm ơn bạn.", "success");
+    }
+
+    function copyText(text, label) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`Đã sao chép ${label}!`, "success");
+        });
+      } else {
+        const temp = document.createElement("input");
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        showToast(`Đã sao chép ${label}!`, "success");
+      }
+    }
+
+    function copyMoney() {
+      copyText(String(calculatedGrandTotal), "Số tiền");
+    }
+
+    function showToast(msg, type = "normal") {
+      const toast = document.getElementById("toastNotice");
+      const toastMsg = document.getElementById("toastMsg");
+      const toastIcon = document.getElementById("toastIcon");
+
+      toastMsg.innerText = msg;
+      if (typeof getIcon === 'function') {
+        toastIcon.innerHTML = (type === "success") ? getIcon("check") : (type === "error" ? getIcon("close") : getIcon("info"));
+      } else {
+        toastIcon.innerText = (type === "success") ? "✓" : (type === "error" ? "✕" : "ℹ");
+      }
+      toast.className = `toast-notice ${type}`;
+      toast.style.display = "flex";
+
+      clearTimeout(window._toastTimeout);
+      window._toastTimeout = setTimeout(() => {
+        toast.style.display = "none";
+      }, 3000);
+    }
+  </script>
 </body>
 
 </html>

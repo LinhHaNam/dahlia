@@ -4,328 +4,530 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Dahlia Hanoi · Trang chủ</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap">
+  <title>The Dahlia Travel · Hệ thống đặt tour du lịch cao cấp miền Bắc</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif:wght@400;600&display=swap">
+  <script src="site-config.js"></script>
+  <script src="icons.js" defer></script>
 </head>
 
 <body>
 
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-promo" id="topBarPromo">
+      <i data-icon="gift"></i> <b>Ưu đãi mùa du lịch 2026:</b> Nhập mã <a href="tour.html?coupon=DAHLIA10#couponInput">DAHLIA10</a> giảm ngay 10% hoặc <a
+        href="tour.html?coupon=TRANGNAU#couponInput">TRANGNAU</a> giảm 200.000₫!
+    </div>
+    <div class="top-bar-contact" id="topBarContact">
+      <span><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></span>
+      <span><i data-icon="chat"></i> Hỗ trợ Wapus / Zalo: <b>0988 888 888</b></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
   <header class="nav">
-    <a href="index.html"><img class="logo" src="images/logo.png" alt="The Dahlia Hanoi"></a>
+    <a class="logo-wrapper" href="index.html">
+      <img class="logo" src="images/logo.png" alt="The Dahlia Travel">
+      <div class="brand-text">
+        <span class="name">THE DAHLIA</span>
+        <span class="tagline">TOUR &amp; TRAVEL</span>
+      </div>
+    </a>
     <nav class="menu">
       <a class="on" href="index.html">Trang chủ</a>
       <a href="tour.html">Khám phá tour</a>
-      <a href="booking.html">Đặt phòng</a>
-      <a href="contact.html">Gửi yêu cầu</a>
-      <span class="lang">VI / EN</span>
-      <a class="btn" href="tour.html" style="display:inline-flex">Đặt ngay <img src="images/arrow-w.svg" alt=""></a>
-      <button class="burger" aria-label="Menu">☰</button>
+      <a href="booking.html">Đặt phòng nghỉ</a>
+      <a href="contact.html">Liên hệ tư vấn</a>
     </nav>
+    <div class="nav-actions">
+      <a class="wapus-badge" href="https://wa.me/84988888888" target="_blank"
+        title="Tư vấn trực tiếp qua WhatsApp/Zalo">
+        <span class="dot"></span>
+        <span>Wapus: 0988 888 888</span>
+      </a>
+      <a class="btn sm" href="tour.html">Đặt tour ngay <img src="images/arrow-w.svg" alt=""></a>
+      <button class="burger" aria-label="Mở menu"></button>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="copy">
-      <p class="eyebrow">Ở lại thật lâu. Khám phá thật sâu.</p>
-      <h1>Hà Nội, theo cách của riêng bạn.</h1>
-      <p>Thức dậy trong một không gian ấm áp. Bước ra những con phố đầy câu chuyện. Cùng The Dahlia, tìm thấy nhịp điệu
-        của riêng mình.</p>
-      <a class="btn" href="tour.html">Khám phá &amp; đặt tour <img src="images/arrow-w.svg" alt=""></a>
-      <a class="u" href="booking.html">Tìm phòng nghỉ của bạn</a>
-      <p class="small">THE DAHLIA HANOI · HOTEL &amp; APARTMENT</p>
-    </div>
-    <div class="pic">
-      <img src="images/hero.png" alt="Hà Nội buổi sớm">
-      <div class="cap">HÀ NỘI · Những buổi sáng dịu dàng</div>
-    </div>
-  </section>
-
-  <section class="search">
-    <div class="tabs">
-      <button type="button" class="tab-btn on" data-tab="tour">Đặt tour trải nghiệm</button>
-      <button type="button" class="tab-btn" data-tab="room">Đặt phòng nghỉ</button>
-    </div>
-
-    <!-- Tab 1: Đặt tour trải nghiệm -->
-    <div class="tab-content on" id="tab-tour">
-      <div class="fields">
-        <div class="field"><label>Bạn muốn đi đâu?</label>
-          <div class="v"><span>Ninh Bình · Tràng An</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
-              fill="none">
-              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></div>
-        </div>
-        <div class="field"><label>Ngày khởi hành</label>
-          <div class="v"><span>20/11/2026 · Thứ Sáu</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
-              fill="none">
-              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></div>
-        </div>
-        <div class="field"><label>Số khách</label>
-          <div class="v"><span>2 người lớn · 0 trẻ em</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
-              fill="none">
-              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></div>
-        </div>
-        <a class="btn" href="tour.html">Tìm tour còn chỗ <img src="images/arrow-w.svg" alt=""></a>
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-head">
+      <div class="brand-text">
+        <span class="name">THE DAHLIA</span>
+        <span class="tagline">TOUR &amp; TRAVEL</span>
       </div>
-      <p>Giá rõ ràng trước khi đặt · Tư vấn hành trình riêng · Hỗ trợ bằng tiếng Việt</p>
+      <button type="button" class="mobile-nav-close" id="closeMobileNav" aria-label="Đóng menu">
+        <i data-icon="close"></i>
+      </button>
     </div>
+    <nav class="mobile-nav-links">
+      <a class="on" href="index.html"><i data-icon="compass"></i> Trang chủ</a>
+      <a href="tour.html"><i data-icon="mountain"></i> Khám phá tour</a>
+      <a href="booking.html"><i data-icon="hotel"></i> Đặt phòng nghỉ</a>
+      <a href="contact.html"><i data-icon="chat"></i> Liên hệ tư vấn</a>
+    </nav>
+    <div class="mobile-nav-contact">
+      <p><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></p>
+      <p><i data-icon="chat"></i> Wapus: <b>0988 888 888</b></p>
+      <p><i data-icon="mail"></i> Email: <b>booking@dahlia.travel</b></p>
+      <a class="btn sm" href="tour.html" style="margin-top:10px;justify-content:center">Đặt tour ngay</a>
+    </div>
+  </div>
 
-    <!-- Tab 2: Đặt phòng nghỉ -->
-    <div class="tab-content" id="tab-room">
-      <div class="fields">
-        <div class="field"><label>Ngày nhận phòng</label>
-          <div class="v"><span>20/11/2026 · Thứ Sáu</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
-              fill="none">
-              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></div>
+  <!-- HERO SECTION (Phong cách MixiVivu - Tone Trắng Nâu) -->
+  <section class="hero-mixi">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badges">
+          <span class="hero-pill"><i data-icon="star"></i> Thương hiệu lữ hành uy tín 2026</span>
+          <span class="hero-pill"><i data-icon="utensils"></i> Bao gồm buffet miễn phí</span>
+          <span class="hero-pill"><i data-icon="bus"></i> Limousine đưa đón</span>
         </div>
-        <div class="field"><label>Ngày trả phòng</label>
-          <div class="v"><span>22/11/2026 · Chủ Nhật</span><svg class="arr" width="12" height="12" viewBox="0 0 12 12"
-              fill="none">
-              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></div>
+        <h1>Hành trình di sản.<br><span>Trải nghiệm tinh hoa.</span></h1>
+        <p class="lead">
+          Khám phá trọn vẹn 5 tuyệt cảnh miền Bắc: <b>Ninh Bình, Hà Giang, Sapa, Hà Nội và Hạ Long</b> cùng The Dahlia
+          Travel. Dịch vụ chuẩn 4–5 sao, lịch trình tinh gọn và cam kết giá tốt nhất.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <a class="btn lg" href="tour.html">Khám phá các tour <img src="images/arrow-w.svg" alt=""></a>
+          <a class="btn alt lg" href="#toursGridSec">Xem bảng giá ưu đãi</a>
         </div>
-        <div class="field"><label>Số khách &amp; phòng</label>
-          <div class="v"><span>2 người lớn · 0 trẻ em · 1 phòng</span><svg class="arr" width="12" height="12"
-              viewBox="0 0 12 12" fill="none">
-              <path d="M2.5 4.5 6 8l3.5-3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></div>
-        </div>
-        <a class="btn" href="booking.html">Kiểm tra phòng <img src="images/arrow-w.svg" alt=""></a>
       </div>
-      <p>Đảm bảo giá tốt nhất khi đặt trực tiếp · Bữa sáng đi kèm · Hỗ trợ nhận phòng linh hoạt</p>
-    </div>
-  </section>
-
-  <section class="promises">
-    <div><span>✦</span>
-      <p>Lựa chọn tour &amp; phòng trong một nơi</p>
-    </div>
-    <div><span>✦</span>
-      <p>Lịch trình tinh gọn, trải nghiệm trọn vẹn</p>
-    </div>
-    <div><span>✦</span>
-      <p>Đội ngũ đồng hành trước &amp; trong chuyến đi</p>
-    </div>
-  </section>
-
-  <section class="split">
-    <img src="images/story.png" alt="Không gian nghỉ">
-    <div class="stack">
-      <p class="eyebrow">Một chốn để trở về</p>
-      <h2>Không chỉ là nơi nghỉ.<br>Là khởi đầu của hành trình.</h2>
-      <p class="lead">Giữa nhịp sống Hà Nội, The Dahlia dành cho bạn sự thư thái của một ngôi nhà và cảm hứng của một
-        chuyến đi. Từ căn phòng ấm cúng đến những hành trình miền Bắc, mọi lựa chọn đều bắt đầu từ bạn.</p>
-      <a class="btn alt" href="booking.html">Khám phá phòng &amp; căn hộ <img src="images/arrow-b.svg" alt=""></a>
-    </div>
-  </section>
-
-  <section class="band sand" id="tour">
-    <div class="row">
-      <div class="stack" style="gap:12px">
-        <p class="eyebrow">Đi xa hơn một chút</p>
-        <h2>Những hành trình đáng để đi.</h2>
-        <p class="lead">Rời phố một ngày, mang về nhiều hơn một kỷ niệm.</p>
+      <div class="hero-visual">
+        <div class="hero-img-card">
+          <img src="images/hero.png" alt="Du lịch miền Bắc">
+          <div class="hero-card-floating">
+            <div>
+              <div class="t-name">Hạ Long &amp; Ninh Bình Di Sản</div>
+              <div style="font-size:12px;color:var(--muted)">Khởi hành hàng ngày từ Hà Nội</div>
+            </div>
+            <div class="t-price">Từ 1.250.000 ₫</div>
+          </div>
+        </div>
       </div>
-      <a class="btn alt" style="flex:none" href="#">Xem tất cả tour <img src="images/arrow-b.svg" alt=""></a>
     </div>
-    <div class="grid">
-      <article class="tour"><img src="images/tour1.png" alt="Tràng An">
-        <div class="info">
-          <p class="eyebrow">Được yêu thích</p>
-          <h3>Ninh Bình — Một ngày giữa di sản</h3>
-          <p class="meta">1 ngày · Tràng An – Hoa Lư – Hang Múa</p>
-          <p class="price">1.250.000 ₫ / khách</p>
-          <p class="small">Giá mẫu · Có lịch khởi hành hằng ngày</p>
-          <a class="btn alt" href="#">Chọn tour &amp; xem lịch <img src="images/arrow-b.svg" alt=""></a>
+
+    <!-- FLOATING SEARCH BAR (MixiVivu Style) -->
+    <div class="search-widget">
+      <div class="search-tabs">
+        <button type="button" class="search-tab-btn on">
+          <i data-icon="compass"></i> Tìm kiếm tour du lịch
+        </button>
+        <button type="button" class="search-tab-btn" onclick="window.location.href='booking.html'">
+          <i data-icon="hotel"></i> Đặt phòng nghỉ
+        </button>
+      </div>
+      <form class="search-form-row" onsubmit="event.preventDefault(); handleHeroSearch();">
+        <div class="search-field">
+          <label><i data-icon="mapPin"></i> Điểm đến</label>
+          <select id="heroDestSelect">
+            <option value="all">Tất cả điểm đến (5 điểm nổi tiếng)</option>
+            <option value="ninh-binh">Ninh Bình — Tràng An &amp; Hang Múa</option>
+            <option value="ha-giang">Hà Giang — Mã Pí Lèng &amp; Nho Quế</option>
+            <option value="sapa">Sapa — Đỉnh Fansipan &amp; Cát Cát</option>
+            <option value="ha-noi">Hà Nội — 36 Phố Phường &amp; Ẩm Thực</option>
+            <option value="ha-long">Hạ Long — Du thuyền 5 Sao Vịnh Di Sản</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label><i data-icon="calendar"></i> Ngày khởi hành</label>
+          <input type="date" id="heroStartDate">
+        </div>
+        <div class="search-field">
+          <label><i data-icon="users"></i> Số lượng khách</label>
+          <select id="heroGuestsSelect">
+            <option value="2">2 người lớn</option>
+            <option value="1">1 người lớn</option>
+            <option value="3">3 người lớn</option>
+            <option value="4">Gia đình (2 lớn + 2 trẻ em)</option>
+            <option value="group">Đoàn thể (&gt; 5 khách)</option>
+          </select>
+        </div>
+        <button type="submit" class="btn" style="height:52px;padding:0 28px">
+          Tìm tour ngay <img src="images/arrow-w.svg" alt="">
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 5 DESTINATIONS SHOWCASE -->
+  <section class="destinations-sec" id="destinationsSec">
+    <div class="sec-head">
+      <div class="title-col">
+        <span class="eyebrow">Khám phá miền Bắc</span>
+        <h2>5 Điểm Đến Hàng Đầu</h2>
+      </div>
+      <p class="lead" style="max-width:400px">Những vùng đất đậm đà bản sắc, cảnh sắc hùng vĩ và trải nghiệm không thể
+        bỏ lỡ.</p>
+    </div>
+
+    <div class="dest-grid">
+      <!-- Ninh Binh -->
+      <div class="dest-card" onclick="window.location.href='tour.html?tour=ninh-binh'">
+        <img src="images/tour1.png" alt="Ninh Bình">
+        <span class="dest-badge">Cố Đô Di Sản</span>
+        <div class="dest-overlay">
+          <h3>Ninh Bình</h3>
+          <span class="tour-count">Tràng An · Tam Cốc · Hang Múa</span>
+        </div>
+      </div>
+
+      <!-- Ha Giang -->
+      <div class="dest-card" onclick="window.location.href='tour.html?tour=ha-giang'">
+        <img src="images/hagiang.jpg" alt="Hà Giang">
+        <span class="dest-badge">Đệ Nhất Hùng Quan</span>
+        <div class="dest-overlay">
+          <h3>Hà Giang</h3>
+          <span class="tour-count">Mã Pí Lèng · Sông Nho Quế · Lũng Cú</span>
+        </div>
+      </div>
+
+      <!-- Sapa -->
+      <div class="dest-card" onclick="window.location.href='tour.html?tour=sapa'">
+        <img src="images/sapa.jpg" alt="Sapa">
+        <span class="dest-badge">Thị Xã Trong Mây</span>
+        <div class="dest-overlay">
+          <h3>Sapa</h3>
+          <span class="tour-count">Đỉnh Fansipan 3.143m · Bản Cát Cát</span>
+        </div>
+      </div>
+
+      <!-- Ha Noi -->
+      <div class="dest-card" onclick="window.location.href='tour.html?tour=ha-noi'">
+        <img src="images/tour3.png" alt="Hà Nội">
+        <span class="dest-badge">Kinh Kỳ Ngàn Năm</span>
+        <div class="dest-overlay">
+          <h3>Hà Nội</h3>
+          <span class="tour-count">36 Phố Phường · Hồ Gươm · Food Tour</span>
+        </div>
+      </div>
+
+      <!-- Ha Long -->
+      <div class="dest-card" onclick="window.location.href='tour.html?tour=ha-long'">
+        <img src="images/tour2.png" alt="Hạ Long">
+        <span class="dest-badge">Kỳ Quan Thế Giới</span>
+        <div class="dest-overlay">
+          <h3>Hạ Long</h3>
+          <span class="tour-count">Du thuyền 5 Sao · Hang Sửng Sốt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED TOURS (MixiVivu Card Grid) -->
+  <section class="tours-sec" id="toursGridSec">
+    <div class="sec-head">
+      <div class="title-col">
+        <span class="eyebrow">Hành trình chọn lọc</span>
+        <h2>Danh Sách Tour Bán Chạy Nhất</h2>
+      </div>
+      <a class="btn alt" href="tour.html">Xem tất cả tour <img src="images/arrow-b.svg" alt=""></a>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+    <div class="tour-filter-bar">
+      <button type="button" class="filter-btn active" onclick="filterTours('all', this)">Tất cả (5 Tour)</button>
+      <button type="button" class="filter-btn" onclick="filterTours('ninh-binh', this)">Ninh Bình</button>
+      <button type="button" class="filter-btn" onclick="filterTours('ha-giang', this)">Hà Giang</button>
+      <button type="button" class="filter-btn" onclick="filterTours('sapa', this)">Sapa</button>
+      <button type="button" class="filter-btn" onclick="filterTours('ha-noi', this)">Hà Nội</button>
+      <button type="button" class="filter-btn" onclick="filterTours('ha-long', this)">Hạ Long</button>
+    </div>
+
+    <!-- CARDS CONTAINER -->
+    <div class="tour-cards-grid" id="toursListGrid">
+      <!-- Tour 1: Ninh Bình -->
+      <article class="tour-card" data-dest="ninh-binh">
+        <div class="tour-thumb">
+          <img src="images/tour1.png" alt="Tour Ninh Bình">
+          <span class="tour-tag-discount">Tiết kiệm 20%</span>
+          <span class="tour-tag-buffet"><i data-icon="utensils"></i> Buffet dê núi miễn phí</span>
+          <span class="tour-duration-pill"><i data-icon="clock"></i> 1 ngày</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-dest-rating">
+            <span class="tour-dest-name">Ninh Bình</span>
+            <span class="tour-stars"><i data-icon="star"></i> 4.9 (168 đánh giá)</span>
+          </div>
+          <h3>Ninh Bình — Tuyệt tác Di sản Tràng An &amp; Hang Múa</h3>
+          <ul class="tour-perks">
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Buffet miễn phí:</b> Hơn 30 món đặc sản Cố Đô</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Phương tiện:</b> Xe Limousine đón trả tận nơi tại Hà Nội</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Vé VIP:</b> Thuyền nan Tràng An &amp; đỉnh Hang Múa</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="tour-old-price">1.550.000 ₫</span>
+              <span class="tour-price-val">1.250.000 ₫ <small>/ khách</small></span>
+            </div>
+            <a class="btn sm" href="tour.html?tour=ninh-binh">Đặt tour ngay</a>
+          </div>
         </div>
       </article>
-      <article class="tour"><img src="images/tour2.png" alt="Hạ Long">
-        <div class="info">
-          <p class="eyebrow">Nghỉ dưỡng</p>
-          <h3>Hạ Long — Chạm vào kỳ quan</h3>
-          <p class="meta">2 ngày 1 đêm · Du thuyền &amp; vịnh biển</p>
-          <p class="price">3.450.000 ₫ / khách</p>
-          <p class="small">Giá mẫu · Có lịch khởi hành hằng ngày</p>
-          <a class="btn alt" href="#">Chọn tour &amp; xem lịch <img src="images/arrow-b.svg" alt=""></a>
+
+      <!-- Tour 2: Hà Giang -->
+      <article class="tour-card" data-dest="ha-giang">
+        <div class="tour-thumb">
+          <img src="images/hagiang.jpg" alt="Tour Hà Giang">
+          <span class="tour-tag-discount">Bán chạy nhất</span>
+          <span class="tour-tag-buffet"><i data-icon="utensils"></i> Buffet lẩu gà đen</span>
+          <span class="tour-duration-pill"><i data-icon="clock"></i> 3 ngày 2 đêm</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-dest-rating">
+            <span class="tour-dest-name">Hà Giang</span>
+            <span class="tour-stars"><i data-icon="star"></i> 4.95 (215 đánh giá)</span>
+          </div>
+          <h3>Hà Giang Hùng Vĩ — Chinh phục Mã Pí Lèng &amp; Hẻm Tu Sản</h3>
+          <ul class="tour-perks">
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Buffet miễn phí:</b> 5 bữa ăn đặc sản + Buffet lẩu gà đen</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Trải nghiệm:</b> Du thuyền hẻm Tu Sản sông Nho Quế</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Phương tiện:</b> Xe cabin cung điện nằm êm ái khứ hồi</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="tour-old-price">3.450.000 ₫</span>
+              <span class="tour-price-val">2.850.000 ₫ <small>/ khách</small></span>
+            </div>
+            <a class="btn sm" href="tour.html?tour=ha-giang">Đặt tour ngay</a>
+          </div>
         </div>
       </article>
-      <article class="tour"><img src="images/tour3.png" alt="Phố cổ">
-        <div class="info">
-          <p class="eyebrow">Trải nghiệm địa phương</p>
-          <h3>Hà Nội — Hương vị phố cổ</h3>
-          <p class="meta">4 giờ · Đi bộ &amp; ẩm thực bản địa</p>
-          <p class="price">650.000 ₫ / khách</p>
-          <p class="small">Giá mẫu · Có lịch khởi hành hằng ngày</p>
-          <a class="btn alt" href="#">Chọn tour &amp; xem lịch <img src="images/arrow-b.svg" alt=""></a>
+
+      <!-- Tour 3: Sapa -->
+      <article class="tour-card" data-dest="sapa">
+        <div class="tour-thumb">
+          <img src="images/sapa.jpg" alt="Tour Sapa">
+          <span class="tour-tag-discount">Ưu đãi mùa mây</span>
+          <span class="tour-tag-buffet"><i data-icon="utensils"></i> Buffet sáng 4 sao</span>
+          <span class="tour-duration-pill"><i data-icon="clock"></i> 2 ngày 1 đêm</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-dest-rating">
+            <span class="tour-dest-name">Sapa</span>
+            <span class="tour-stars"><i data-icon="star"></i> 4.92 (184 đánh giá)</span>
+          </div>
+          <h3>Sapa Mờ Sương — Chinh phục Đỉnh Fansipan &amp; Bản Cát Cát</h3>
+          <ul class="tour-perks">
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Buffet miễn phí:</b> Buffet sáng quốc tế + Lẩu cá hồi tươi</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Vé VIP:</b> Cáp treo Fansipan 3.143m khứ hồi đã bao gồm</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Nghỉ dưỡng:</b> Khách sạn 4 sao view thung lũng Mường Hoa</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="tour-old-price">2.650.000 ₫</span>
+              <span class="tour-price-val">2.150.000 ₫ <small>/ khách</small></span>
+            </div>
+            <a class="btn sm" href="tour.html?tour=sapa">Đặt tour ngay</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 4: Hà Nội -->
+      <article class="tour-card" data-dest="ha-noi">
+        <div class="tour-thumb">
+          <img src="images/tour3.png" alt="Tour Hà Nội">
+          <span class="tour-tag-discount">Trải nghiệm địa phương</span>
+          <span class="tour-tag-buffet"><i data-icon="utensils"></i> Food Tour trọn gói</span>
+          <span class="tour-duration-pill"><i data-icon="clock"></i> 1 ngày</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-dest-rating">
+            <span class="tour-dest-name">Hà Nội</span>
+            <span class="tour-stars"><i data-icon="star"></i> 4.88 (142 đánh giá)</span>
+          </div>
+          <h3>Hà Nội 36 Phố Phường — Ký ức Thăng Long &amp; Tinh hoa Ẩm thực</h3>
+          <ul class="tour-perks">
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Ẩm thực trọn gói:</b> Bún chả gia truyền, Cà phê trứng Giảng</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Phương tiện:</b> 1 giờ dạo xích lô truyền thống quanh Hồ Gươm</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Văn hóa:</b> Vé Văn Miếu Quốc Tử Giám &amp; Nhà tù Hỏa Lò</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="tour-old-price">950.000 ₫</span>
+              <span class="tour-price-val">750.000 ₫ <small>/ khách</small></span>
+            </div>
+            <a class="btn sm" href="tour.html?tour=ha-noi">Đặt tour ngay</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tour 5: Hạ Long -->
+      <article class="tour-card" data-dest="ha-long">
+        <div class="tour-thumb">
+          <img src="images/tour2.png" alt="Du thuyền Hạ Long">
+          <span class="tour-tag-discount">Nghỉ dưỡng 5 Sao</span>
+          <span class="tour-tag-buffet"><i data-icon="utensils"></i> Đại tiệc Buffet hải sản</span>
+          <span class="tour-duration-pill"><i data-icon="clock"></i> 2 ngày 1 đêm</span>
+        </div>
+        <div class="tour-body">
+          <div class="tour-dest-rating">
+            <span class="tour-dest-name">Hạ Long</span>
+            <span class="tour-stars"><i data-icon="star"></i> 4.98 (312 đánh giá)</span>
+          </div>
+          <h3>Hạ Long Kỳ Quan — Du thuyền 5 Sao Vịnh Di Sản &amp; Hang Sửng Sốt</h3>
+          <ul class="tour-perks">
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Buffet miễn phí:</b> Buffet hải sản tôm hùm, cua biển không giới
+              hạn</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Nghỉ dưỡng:</b> Phòng có ban công riêng ngắm trọn vẹn vịnh</li>
+            <li><span class="check-icon"><i data-icon="check"></i></span> <b>Hoạt động:</b> Chèo kayak vịnh Lan Hạ, tắm biển đảo Ti Tốp</li>
+          </ul>
+          <div class="tour-footer">
+            <div class="tour-price-box">
+              <span class="tour-old-price">4.500.000 ₫</span>
+              <span class="tour-price-val">3.650.000 ₫ <small>/ khách</small></span>
+            </div>
+            <a class="btn sm" href="tour.html?tour=ha-long">Đặt tour ngay</a>
+          </div>
         </div>
       </article>
     </div>
   </section>
 
-  <section class="band" id="phong">
-    <div class="row">
-      <div class="stack" style="gap:12px">
-        <p class="eyebrow">Nghỉ lại cùng The Dahlia</p>
-        <h2>Ấm áp như nhà, tinh tế như bạn.</h2>
-        <p class="lead">Chọn một không gian phù hợp, để mỗi ngày ở Hà Nội thật nhẹ nhàng.</p>
+  <!-- WHY CHOOSE DAHLIA (MixiVivu Features) -->
+  <section class="features-sec">
+    <div class="sec-head">
+      <div class="title-col">
+        <span class="eyebrow">Cam kết chất lượng</span>
+        <h2>Tại Sao Khách Hàng Chọn The Dahlia Travel?</h2>
       </div>
-      <a class="btn" style="flex:none" href="#">Kiểm tra phòng <img src="images/arrow-w.svg" alt=""></a>
+      <p class="lead" style="max-width:420px">Đem lại sự an tâm tuyệt đối và những kỷ niệm khó quên cho từng hành trình.
+      </p>
     </div>
-    <div class="grid rooms">
-      <article class="room"><img src="images/story.png" alt="Deluxe King">
-        <div class="info">
-          <h3>Deluxe King</h3>
-          <p class="sub">28 m² · 1 giường King · 2 khách</p>
-          <p class="price">Từ 1.450.000 ₫ / đêm</p>
-          <p class="meta">Wi-Fi miễn phí · Bữa sáng · Không hút thuốc</p>
-          <a class="btn alt" href="#">Chọn phòng này <img src="images/arrow-b.svg" alt=""></a>
+
+    <div class="features-grid">
+      <div class="feature-box">
+        <div class="feature-icon"><i data-icon="utensils"></i></div>
+        <h4>Buffet &amp; Ẩm Thực Miễn Phí</h4>
+        <p>100% các tour đều bao gồm bữa ăn tiêu chuẩn cao cấp, tiệc buffet hải sản hoặc đặc sản vùng miền tươi ngon,
+          không phát sinh chi phí.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon"><i data-icon="bus"></i></div>
+        <h4>Xe Đưa Đón Hạng Thương Gia</h4>
+        <p>Đội xe Limousine Dcar, Universe đời mới trang bị ghế massage, cổng sạc điện thoại và đón trả tận nơi tại Hà
+          Nội an toàn.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon"><i data-icon="shield"></i></div>
+        <h4>Bảo Hiểm Du Lịch Trọn Gói</h4>
+        <p>Mỗi hành khách đều được bảo hiểm du lịch toàn diện với hạn mức tối đa lên đến 50.000.000 – 100.000.000 VNĐ
+          cho mỗi chuyến đi.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon"><i data-icon="chat"></i></div>
+        <h4>Hỗ Trợ Wapus &amp; Zalo 24/7</h4>
+        <p>Đội ngũ chuyên viên tư vấn riêng qua Wapus/Zalo luôn túc trực hỗ trợ giải đáp, điều chỉnh lịch trình theo nhu
+          cầu thực tế.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="destinations-sec" style="background:var(--cream);padding:70px var(--px)">
+    <div
+      style="background:#fff;border:1px solid var(--line);border-radius:var(--radius-xl);padding:48px;display:flex;align-items:center;gap:40px;box-shadow:var(--shadow-sm)">
+      <div style="flex:1">
+        <span class="eyebrow">Đánh giá từ khách hàng</span>
+        <div style="color:var(--gold);font-size:18px;margin:12px 0;display:flex;gap:4px">
+          <i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i><i data-icon="star"></i>
         </div>
-      </article>
-      <article class="room"><img src="images/room2.png" alt="Căn hộ một phòng ngủ">
-        <div class="info">
-          <h3>Căn hộ một phòng ngủ</h3>
-          <p class="sub">45 m² · Bếp riêng · 2–3 khách</p>
-          <p class="price">Từ 2.200.000 ₫ / đêm</p>
-          <p class="meta">Wi-Fi miễn phí · Bữa sáng · Không hút thuốc</p>
-          <a class="btn alt" href="#">Chọn phòng này <img src="images/arrow-b.svg" alt=""></a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="split sand">
-    <div class="stack">
-      <p class="eyebrow">Một Hà Nội rất riêng</p>
-      <h2>Những điều nhỏ bé,<br>làm nên chuyến đi lớn.</h2>
-      <p class="lead">Một bát phở nóng buổi sớm, một tách cà phê bên ô cửa, một ngõ nhỏ chưa từng ghé. Hãy để chúng tôi
-        gợi ý những trải nghiệm gần gũi nhất với bạn.</p>
-      <a class="btn alt" href="#">Nhờ tư vấn hành trình <img src="images/arrow-b.svg" alt=""></a>
-    </div>
-    <img src="images/tour3.png" alt="Hương vị Hà Nội">
-  </section>
-
-  <section class="band" style="padding:64px var(--px)">
-    <p class="eyebrow">Đơn giản từ bước đầu</p>
-    <h2>Chuyến đi đẹp bắt đầu với 3 bước.</h2>
-    <div class="steps">
-      <div class="step"><span class="n">01</span>
-        <hr><b>Chọn trải nghiệm</b>
-        <p>Chọn tour hoặc phòng, ngày đi và số khách phù hợp.</p>
+        <blockquote class="serif" style="font-size:26px;color:var(--brown-dark);line-height:1.5;margin-bottom:18px">
+          “Chuyến đi Hạ Long và Ninh Bình vừa rồi thực sự trọn vẹn. Bữa ăn buffet hải sản tươi ngon vượt mong đợi, xe
+          đón đúng giờ và hướng dẫn viên rất có tâm. Chắc chắn sẽ quay lại cùng The Dahlia!”
+        </blockquote>
+        <div style="font-weight:700;color:var(--ink)">Chị Hoàng Mai Lan &amp; Gia đình</div>
+        <div style="font-size:12px;color:var(--muted)">Đã trải nghiệm Tour Du thuyền 5 Sao Hạ Long &amp; Tour Ninh Bình
+          1 Ngày</div>
       </div>
-      <div class="step"><span class="n">02</span>
-        <hr><b>Kiểm tra &amp; đặt chỗ</b>
-        <p>Xem tình trạng chỗ, chi tiết giá và điền thông tin của bạn.</p>
-      </div>
-      <div class="step"><span class="n">03</span>
-        <hr><b>Sẵn sàng lên đường</b>
-        <p>Nhận xác nhận cùng hướng dẫn để bắt đầu chuyến đi.</p>
+      <div style="width:300px;flex-shrink:0" class="hero-visual">
+        <img src="images/story.png" alt="Khách hàng Dahlia"
+          style="border-radius:var(--radius-lg);box-shadow:var(--shadow-md);height:260px;width:100%;object-fit:cover">
       </div>
     </div>
   </section>
 
-  <section class="quote">
-    <p class="eyebrow">Những kỷ niệm ở lại</p>
-    <p class="stars">★★★★★</p>
-    <blockquote>“Một căn phòng thật ấm áp và chuyến đi Ninh Bình được chuẩn bị chu đáo. Chúng tôi chỉ cần tận hưởng từng
-      khoảnh khắc.”</blockquote>
-    <p class="who">Minh Anh · Lưu trú &amp; tour Ninh Bình</p>
-    <p class="tiny">Nội dung đánh giá minh họa</p>
-  </section>
-
-  <section class="faq">
-    <div class="intro">
-      <p class="eyebrow">Trước chuyến đi</p>
-      <h2>Bạn hỏi,<br>The Dahlia trả lời.</h2>
-      <p class="lead">Những thông tin hữu ích để bạn đặt chỗ tự tin hơn.</p>
-    </div>
-    <div class="list">
-      <div class="q"><b>Tôi có thể đặt tour khi không lưu trú không?</b>
-        <p>Có. Bạn có thể chọn tour riêng hoặc kết hợp cùng phòng nghỉ tại The Dahlia.</p>
-      </div>
-      <div class="q"><b>Giá hiển thị đã bao gồm những gì?</b>
-        <p>Mỗi tour và phòng đều có mục bao gồm, khoản phí và tổng tiền trước khi xác nhận.</p>
-      </div>
-      <div class="q"><b>Tôi có thể thay đổi ngày đặt không?</b>
-        <p>Điều kiện thay đổi phụ thuộc từng lựa chọn. Vui lòng xem chính sách ngay tại trang đặt chỗ.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div>
-      <h2>Hẹn bạn một ngày ở Hà Nội.</h2>
-      <p>Căn phòng ấm áp và hành trình mới đang chờ bạn.</p>
-    </div>
-    <a class="btn" href="tour.html">Lên kế hoạch ngay <img src="images/arrow-w.svg" alt=""></a>
-  </section>
-
+  <!-- FOOTER -->
   <footer>
     <div class="fcols">
       <div>
-        <p class="brand">THE DAHLIA HANOI.</p>
-        <p style="font-size:10px;color:var(--brown)">HOTEL &amp; APARTMENT</p>
-        <p>Một chốn nghỉ an yên. Một hành trình đáng nhớ.</p>
+        <p class="brand">THE DAHLIA TRAVEL.</p>
+        <p style="font-size:11px;color:var(--brown);font-weight:600">CÔNG TY DU LỊCH &amp; NGHỈ DƯỠNG CAO CẤP</p>
+        <p style="font-size:13px;line-height:1.6">Hệ thống đặt tour du lịch và nghỉ dưỡng miền Bắc phong cách Trắng Nâu
+          thanh lịch. Chuyên tuyến: Ninh Bình, Hà Giang, Sapa, Hà Nội, Hạ Long với tiệc buffet miễn phí.</p>
       </div>
-      <div><b>Hành trình của bạn</b>
-        <p>Khám phá tour · Phòng &amp; căn hộ</p>
-        <p>Gửi yêu cầu · Điều kiện đặt chỗ</p>
+      <div>
+        <b>Tour nổi bật</b>
+        <p><a href="tour.html?tour=ninh-binh">Tour Ninh Bình 1 ngày</a></p>
+        <p><a href="tour.html?tour=ha-giang">Tour Hà Giang 3N2Đ</a></p>
+        <p><a href="tour.html?tour=sapa">Tour Sapa Fansipan 2N1Đ</a></p>
+        <p><a href="tour.html?tour=ha-noi">Tour Hà Nội City &amp; Food</a></p>
+        <p><a href="tour.html?tour=ha-long">Du thuyền 5 Sao Hạ Long</a></p>
       </div>
-      <div><b>Liên hệ tư vấn</b>
-        <p>booking@dahlia.example</p>
-        <p>+84 24 0000 0000 · Hà Nội, Việt Nam</p>
-        <p class="copy">Thông tin</p>
+      <div>
+        <b>Hỗ trợ khách hàng</b>
+        <p><a href="tour.html">Khám phá tour</a></p>
+        <p><a href="booking.html">Đặt phòng nghỉ</a></p>
+        <p><a href="contact.html">Liên hệ tư vấn</a></p>
+        <p><a href="tour.html">Chính sách hủy đổi</a></p>
+      </div>
+      <div>
+        <b>Liên hệ 24/7</b>
+        <p><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></p>
+        <p><i data-icon="chat"></i> Wapus / Zalo: <b>0988 888 888</b></p>
+        <p><i data-icon="mail"></i> Email: <b>booking@dahlia.travel</b></p>
+        <p><i data-icon="mapPin"></i> Địa chỉ: Hoàn Kiếm, Hà Nội, Việt Nam</p>
       </div>
     </div>
     <hr>
-    <p class="copy">© 2026 THE DAHLIA HANOI.</p>
+    <div class="footer-bottom">
+      <span>© 2026 THE DAHLIA TRAVEL. Tất cả quyền được bảo lưu. Giấy phép lữ hành số: 01-1234/2026/TCDL-GP LHQT.</span>
+    </div>
   </footer>
 
   <script>
-    (function () {
-      const tabBtns = document.querySelectorAll('.tabs .tab-btn');
-      const tabContents = {
-        tour: document.getElementById('tab-tour'),
-        room: document.getElementById('tab-room')
-      };
+    // Set default search date
+    document.addEventListener("DOMContentLoaded", function () {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 2);
+      const yyyy = tomorrow.getFullYear();
+      const mm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+      const dd = String(tomorrow.getDate()).padStart(2, '0');
+      const input = document.getElementById("heroStartDate");
+      if (input) input.value = `${yyyy}-${mm}-${dd}`;
+    });
 
-      function activateTab(tabName) {
-        tabBtns.forEach(btn => {
-          btn.classList.toggle('on', btn.dataset.tab === tabName);
-        });
-        Object.keys(tabContents).forEach(key => {
-          if (tabContents[key]) {
-            tabContents[key].classList.toggle('on', key === tabName);
-          }
-        });
-      }
+    // Lọc tour theo điểm đến
+    function filterTours(dest, btnElement) {
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      if (btnElement) btnElement.classList.add("active");
 
-      tabBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-          const tab = this.dataset.tab;
-          activateTab(tab);
-          if (history.replaceState) {
-            history.replaceState(null, '', '#' + tab);
-          }
-        });
+      const cards = document.querySelectorAll(".tour-card");
+      cards.forEach(card => {
+        if (dest === "all" || card.dataset.dest === dest) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
       });
+    }
 
-      const hash = window.location.hash.toLowerCase();
-      if (hash === '#room' || hash === '#booking' || hash === '#phong') {
-        activateTab('room');
+    // Xử lý tìm kiếm từ Hero bar
+    function handleHeroSearch() {
+      const dest = document.getElementById("heroDestSelect").value;
+      if (dest === "all") {
+        document.getElementById("toursGridSec").scrollIntoView({ behavior: "smooth" });
       } else {
-        activateTab('tour');
+        window.location.href = `tour.html?tour=${dest}`;
       }
-    })();
+    }
   </script>
 </body>
 

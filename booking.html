@@ -4,143 +4,853 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Dahlia Hanoi · Đặt phòng</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Serif&display=swap">
+  <title>The Dahlia Travel · Đặt phòng nghỉ cao cấp</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Noto+Serif:wght@400;600&display=swap">
+  <script src="site-config.js"></script>
+  <script src="icons.js" defer></script>
 </head>
 
 <body>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-promo" id="topBarPromo">
+      <i data-icon="gift"></i> <b>Ưu đãi mùa du lịch 2026:</b> Nhập mã <a href="tour.html?coupon=DAHLIA10#couponInput">DAHLIA10</a> giảm ngay 10% hoặc <a href="tour.html?coupon=TRANGNAU#couponInput">TRANGNAU</a> giảm 200.000₫!
+    </div>
+    <div class="top-bar-contact" id="topBarContact">
+      <span><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></span>
+      <span><i data-icon="chat"></i> Hỗ trợ Wapus / Zalo: <b>0988 888 888</b></span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
   <header class="nav">
-    <a href="index.html"><img class="logo" src="images/logo.png" alt="The Dahlia Hanoi"></a>
+    <a class="logo-wrapper" href="index.html">
+      <img class="logo" src="images/logo.png" alt="The Dahlia Travel">
+      <div class="brand-text">
+        <span class="name">THE DAHLIA</span>
+        <span class="tagline">TOUR &amp; TRAVEL</span>
+      </div>
+    </a>
     <nav class="menu">
       <a href="index.html">Trang chủ</a>
       <a href="tour.html">Khám phá tour</a>
-      <a class="on" href="booking.html">Đặt phòng</a>
-      <a href="contact.html">Gửi yêu cầu</a>
-      <span class="lang">VI / EN</span>
-      <a class="btn" href="#tour" style="display:inline-flex">Đặt ngay <img src="images/arrow-w.svg" alt=""></a>
-      <button class="burger" aria-label="Menu">☰</button>
+      <a class="on" href="booking.html">Đặt phòng nghỉ</a>
+      <a href="contact.html">Liên hệ tư vấn</a>
     </nav>
+    <div class="nav-actions">
+      <a class="wapus-badge" href="https://wa.me/84988888888" target="_blank" title="Tư vấn trực tiếp qua WhatsApp/Zalo">
+        <span class="dot"></span>
+        <span>Wapus: 0988 888 888</span>
+      </a>
+      <a class="btn sm" href="tour.html">Đặt tour ngay <img src="images/arrow-w.svg" alt=""></a>
+      <button class="burger" aria-label="Mở menu"></button>
+    </div>
   </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-head">
+      <div class="brand-text">
+        <span class="name">THE DAHLIA</span>
+        <span class="tagline">TOUR &amp; TRAVEL</span>
+      </div>
+      <button type="button" class="mobile-nav-close" id="closeMobileNav" aria-label="Đóng menu">
+        <i data-icon="close"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html"><i data-icon="compass"></i> Trang chủ</a>
+      <a href="tour.html"><i data-icon="mountain"></i> Khám phá tour</a>
+      <a class="on" href="booking.html"><i data-icon="hotel"></i> Đặt phòng nghỉ</a>
+      <a href="contact.html"><i data-icon="chat"></i> Liên hệ tư vấn</a>
+    </nav>
+    <div class="mobile-nav-contact">
+      <p><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></p>
+      <p><i data-icon="chat"></i> Wapus: <b>0988 888 888</b></p>
+      <p><i data-icon="mail"></i> Email: <b>booking@dahlia.travel</b></p>
+      <a class="btn sm" href="tour.html" style="margin-top:10px;justify-content:center">Đặt tour ngay</a>
+    </div>
+  </div>
+
+  <!-- INTRO HEADER -->
   <section class="intro-band" style="padding-top:40px">
-    <p class="crumb">Trang chủ / Đặt phòng</p>
-    <p class="eyebrow">The Dahlia Hanoi · Hotel &amp; Apartment</p>
-    <h2>Một chốn nghỉ dành riêng cho bạn.</h2>
-    <p class="lead">Chọn phòng, xem giá rõ ràng và chuẩn bị cho những ngày thật đẹp ở Hà Nội.</p>
-    <div class="steps2"><span class="on">01 Chọn phòng</span><span>02 Thông tin</span><span>03 Xác nhận</span></div>
+    <p class="crumb">Trang chủ / Đặt phòng nghỉ</p>
+    <p class="eyebrow">The Dahlia Travel · Khách sạn &amp; Căn hộ cao cấp</p>
+    <h2>Đặt phòng nghỉ cao cấp</h2>
+    <p class="lead">Chọn phòng nghỉ phù hợp, xem giá rõ ràng và chuẩn bị cho kỳ nghỉ tuyệt vời cùng The Dahlia.</p>
+    <div class="steps2">
+      <span class="on">01 Chọn phòng nghỉ</span>
+      <span>02 Thông tin người đặt</span>
+      <span>03 Xác nhận đặt phòng</span>
+    </div>
   </section>
+
+  <!-- AVAILABILITY SEARCH BAR -->
   <section class="avail">
     <div class="fields">
-      <div class="field"><label for="a1">Ngày nhận phòng</label><input id="a1" type="text" value="20/11/2026 · Thứ Sáu">
+      <div class="field">
+        <label for="checkInInput"><i data-icon="calendar"></i> Ngày nhận phòng</label>
+        <input id="checkInInput" type="date" onchange="handleDatesChange()">
       </div>
-      <div class="field"><label for="a2">Ngày trả phòng</label><input id="a2" type="text" value="22/11/2026 · Chủ Nhật">
+      <div class="field">
+        <label for="checkOutInput"><i data-icon="flag"></i> Ngày trả phòng</label>
+        <input id="checkOutInput" type="date" onchange="handleDatesChange()">
       </div>
-      <div class="field"><label for="a3">Số khách &amp; phòng</label><select id="a3">
-          <option>2 người lớn · 0 trẻ em · 1 phòng</option>
-        </select></div>
-      <a class="btn" href="#">Kiểm tra phòng <img src="images/arrow-w.svg" alt=""></a>
+      <div class="field">
+        <label for="guestSelect"><i data-icon="users"></i> Số khách &amp; phòng</label>
+        <select id="guestSelect" onchange="handleDatesChange()">
+          <option value="2">2 người lớn · 0 trẻ em · 1 phòng</option>
+          <option value="1">1 người lớn · 0 trẻ em · 1 phòng</option>
+          <option value="3">3 người lớn · 0 trẻ em · 1 phòng</option>
+          <option value="4">2 người lớn · 1 trẻ em · 1 phòng</option>
+        </select>
+      </div>
+      <button class="btn" type="button" onclick="handleDatesChange(true)">
+        Kiểm tra phòng trống <img src="images/arrow-w.svg" alt="">
+      </button>
     </div>
-    <p class="ok">✓ 2 loại phòng còn trống · 2 đêm lưu trú · Kết quả mẫu</p>
+    <p class="ok" id="availStatusText"><i data-icon="check"></i> 3 loại phòng còn trống · 2 đêm lưu trú · Giá ưu đãi trực tiếp</p>
   </section>
+
+  <!-- MAIN CONTENT: ROOMS LIST + SUMMARY SIDEBAR -->
   <section class="bmain">
+    <!-- LEFT: ROOMS LIST + CUSTOMER FORM -->
     <div class="lcol">
-      <h3>01. Chọn phòng của bạn</h3>
-      <div class="room2 sel"><img src="images/story.png" alt="Deluxe King">
-        <div class="d">
-          <div class="n"><img src="images/radio-on.svg" alt="">Deluxe King</div>
-          <p>28 m² · 1 giường King · Tối đa 2 khách</p>
-          <p style="color:var(--ink)">Wi-Fi · Bữa sáng · Điều hòa<br>Phòng tắm riêng · Không hút thuốc</p>
-          <p class="ok">Còn 3 phòng cho ngày đã chọn</p><span class="p">1.450.000 ₫ / đêm</span>
-          <p>2 đêm: 2.755.000 ₫ sau ưu đãi 5%</p><span class="c">✓ Đã chọn · 1 phòng</span>
-        </div>
+      <h3>01. Chọn phòng nghỉ của bạn</h3>
+      <p class="small" style="color:var(--muted);margin-top:-16px">Nhấp vào phòng bất kỳ để chọn và xem chi tiết giá.</p>
+
+      <!-- DYNAMIC ROOMS CONTAINER -->
+      <div id="roomsContainer" style="display:flex;flex-direction:column;gap:20px">
+        <!-- Rendered by JavaScript -->
       </div>
-      <div class="room2"><img src="images/room-apt.png" alt="Căn hộ">
-        <div class="d">
-          <div class="n"><img src="images/radio-off.svg" alt="">Căn hộ một phòng ngủ</div>
-          <p>45 m² · Bếp riêng · Tối đa 3 khách</p>
-          <p style="color:var(--ink)">Wi-Fi · Bữa sáng · Điều hòa<br>Phòng khách · Bàn ăn · Không hút thuốc</p>
-          <p class="ok">Còn 2 căn hộ cho ngày đã chọn</p><span class="p">2.200.000 ₫ / đêm</span><span class="c">Chọn
-            căn hộ này →</span>
+
+      <!-- CUSTOMER FORM -->
+      <form class="box" id="hotelCustomerForm" onsubmit="event.preventDefault(); openRoomCheckoutModal();">
+        <h3>02. Thông tin người đặt phòng</h3>
+        <p class="note" style="font-size:13px;color:var(--muted)">
+          Vui lòng nhập thông tin để nhận xác nhận đặt phòng tức thì. Các trường * là bắt buộc.
+        </p>
+
+        <div class="field">
+          <label for="b1"><i data-icon="user"></i> Họ và tên người đặt *</label>
+          <input id="b1" type="text" value="Nguyễn Minh Anh" required>
         </div>
-      </div>
-      <form class="box" onsubmit="return false">
-        <h3>02. Thông tin người đặt</h3>
-        <p class="note" style="font-size:13px;color:var(--muted)">Vui lòng nhập thông tin để nhận xác nhận đặt phòng.
-          Các trường * là bắt buộc.</p>
-        <div class="field"><label for="b1">Họ và tên *</label><input id="b1" type="text" value="Nguyễn Minh Anh"></div>
+
         <div class="two">
-          <div class="field"><label for="b2">Email *</label><input id="b2" type="email" value="minhanh@example.com">
+          <div class="field">
+            <label for="b2"><i data-icon="mail"></i> Email nhận xác nhận *</label>
+            <input id="b2" type="email" value="minhanh@example.com" required>
           </div>
-          <div class="field"><label for="b3">Số điện thoại *</label><input id="b3" type="tel" value="0912 345 678">
+          <div class="field">
+            <label for="b3"><i data-icon="phone"></i> Số điện thoại / Wapus *</label>
+            <input id="b3" type="tel" value="0912 345 678" required>
           </div>
         </div>
+
         <div class="two">
-          <div class="field"><label for="b4">Quốc gia / vùng lãnh thổ</label><select id="b4">
+          <div class="field">
+            <label for="b4"><i data-icon="compass"></i> Quốc gia / vùng lãnh thổ</label>
+            <select id="b4">
               <option>Việt Nam</option>
-            </select></div>
-          <div class="field"><label for="b5">Thời gian đến dự kiến</label><select id="b5">
-              <option>14:00 – 15:00</option>
-            </select></div>
+              <option>Quốc tế</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="b5"><i data-icon="clock"></i> Thời gian đến dự kiến</label>
+            <select id="b5">
+              <option>14:00 – 15:00 (Giờ chuẩn)</option>
+              <option>15:00 – 18:00</option>
+              <option>Sau 18:00 (Nhận phòng muộn)</option>
+            </select>
+          </div>
         </div>
-        <div class="field"><label for="b6">Yêu cầu đặc biệt (không bắt buộc)</label><textarea
-            id="b6">Tôi muốn phòng ở tầng yên tĩnh, nếu có thể. Cảm ơn The Dahlia!</textarea></div>
-        <p class="small">Yêu cầu đặc biệt tùy tình trạng sẵn có. Chúng tôi sẽ xác nhận trước ngày đến.</p>
+
+        <div class="field">
+          <label for="b6"><i data-icon="chat"></i> Yêu cầu đặc biệt (không bắt buộc)</label>
+          <textarea id="b6" placeholder="Yêu cầu giường đôi, tầng cao, chuẩn bị hoa hoặc đón sân bay...">Tôi muốn phòng ở tầng yên tĩnh, không gian thoáng đãng. Cảm ơn The Dahlia!</textarea>
+        </div>
+        <p class="small">Yêu cầu đặc biệt phụ thuộc tình trạng sẵn có. Khách sạn sẽ xác nhận trước ngày đến.</p>
       </form>
+
+      <!-- INFORMATION BEFORE ARRIVAL -->
       <div class="sec">
         <h3>Trước khi bạn đến</h3>
-        <p style="font-size:13px;color:var(--muted)">Giờ nhận phòng: từ 14:00 · Trả phòng: trước 12:00.<br>Vui lòng mang
-          giấy tờ tùy thân khi nhận phòng. Phòng không hút thuốc. Liên hệ trước nếu bạn cần giường phụ hoặc đi cùng trẻ
-          nhỏ.</p>
-        <a class="btn alt" style="align-self:flex-start" href="contact.html">Gửi yêu cầu cho khách sạn <img
-            src="images/arrow-b.svg" alt=""></a>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7">
+          • <b>Giờ nhận phòng:</b> từ 14:00 · <b>Giờ trả phòng:</b> trước 12:00 trưa.<br>
+          • Vui lòng mang CCCD hoặc Hộ chiếu gốc khi làm thủ tục nhận phòng.<br>
+          • 100% các phòng đều không hút thuốc. Bữa sáng buffet đã được bao gồm trong giá phòng.<br>
+          • Liên hệ trước nếu bạn cần giường phụ hoặc đi cùng trẻ nhỏ.
+        </p>
+        <a class="btn alt" style="align-self:flex-start" href="contact.html">
+          Liên hệ tư vấn thêm <img src="images/arrow-b.svg" alt="">
+        </a>
       </div>
     </div>
+
+    <!-- RIGHT: BOOKING SUMMARY SIDEBAR -->
     <aside class="bside">
       <div class="box sand">
         <p class="eyebrow">Kỳ nghỉ của bạn</p>
-        <h3 class="serif" style="font-size:24px;font-weight:400">Thông tin đặt phòng</h3><img class="sumimg"
-          src="images/story.png" alt="">
-        <b style="font-size:15px">Deluxe King · 1 phòng</b>
-        <p style="font-size:13px;color:var(--muted)">20/11/2026 → 22/11/2026<br>2 đêm · 2 người lớn · 0 trẻ em<br>Bữa
-          sáng cho 2 khách đã bao gồm</p>
+        <h3 class="serif" style="font-size:24px;font-weight:400">Thông tin đặt phòng nghỉ</h3>
+        
+        <img class="sumimg" id="sidebarRoomImg" src="images/story.png" alt="Phòng đã chọn">
+        
+        <b style="font-size:16px;color:var(--brown-dark)" id="sidebarRoomName">Deluxe King · 1 phòng</b>
+        
+        <p style="font-size:13px;color:var(--muted);line-height:1.6" id="sidebarStayDetails">
+          20/11/2026 → 22/11/2026<br>
+          2 đêm · 2 người lớn · 0 trẻ em<br>
+          Bữa sáng buffet cho 2 khách đã bao gồm
+        </p>
+        
         <hr class="l">
-        <div class="pr"><span>2 đêm × 1.450.000 ₫</span><span>2.900.000 ₫</span></div>
-        <div class="pr"><span>Ưu đãi trực tiếp 5%</span><span>−145.000 ₫</span></div>
-        <div class="pr"><span>Thuế &amp; phí dịch vụ</span><span>Đã bao gồm</span></div>
+        
+        <div class="pr">
+          <span id="sidebarFormula">2 đêm × 1.450.000 ₫</span>
+          <span id="sidebarSubtotal">2.900.000 ₫</span>
+        </div>
+        
+        <div class="pr" style="color:var(--green)">
+          <span>Ưu đãi đặt trực tiếp 5%</span>
+          <span id="sidebarDiscount">−145.000 ₫</span>
+        </div>
+        
+        <div class="pr">
+          <span>Thuế &amp; phí dịch vụ</span>
+          <span>Đã bao gồm</span>
+        </div>
+        
         <hr class="l">
-        <div class="pr t"><span>Tổng thanh toán</span><span>2.755.000 ₫</span></div>
-        <p class="small">Giá cuối cùng cho 2 đêm, không có phí ẩn. Giá và ưu đãi là dữ liệu minh họa.</p>
-        <label class="agree"><input type="checkbox"><span>Tôi đồng ý với điều kiện đặt chỗ và chính sách bảo mật thông
-            tin.</span></label>
-        <button class="btn" type="button">Xác nhận đặt phòng <img src="images/arrow-w.svg" alt=""></button>
-        <p class="small">Thông tin xác nhận sẽ gửi đến email bạn đã nhập. Template không thực hiện thanh toán.</p>
-        <hr class="l"><b style="font-size:13px">Chính sách linh hoạt</b>
-        <p class="small" style="font-size:12px">Chính sách mẫu: hủy miễn phí trước 18:00 ngày 18/11/2026. Sau thời điểm
-          này, phí hủy bằng 1 đêm. Không đến nhận phòng: phí 100% đơn đặt.</p>
+        
+        <div class="pr t">
+          <span>Tổng thanh toán</span>
+          <span id="sidebarGrandTotal">2.755.000 ₫</span>
+        </div>
+        
+        <p class="small">Giá cuối cùng cho toàn bộ kỳ nghỉ, không có phụ phí ẩn.</p>
+        
+        <label class="agree">
+          <input type="checkbox" id="roomAgreeCheck" checked>
+          <span>Tôi đồng ý với điều kiện đặt phòng và chính sách bảo mật thông tin.</span>
+        </label>
+        
+        <button class="btn" type="button" onclick="openRoomCheckoutModal()" id="sidebarConfirmBtn">
+          Xác nhận đặt phòng nghỉ <img src="images/arrow-w.svg" alt="">
+        </button>
+        
+        <p class="small" style="font-size:11.5px">Thông tin xác nhận &amp; mã booking sẽ gửi đến email và Wapus của bạn.</p>
+        
+        <hr class="l">
+        <b style="font-size:13px">Chính sách hủy linh hoạt</b>
+        <p class="small" style="font-size:12px;line-height:1.6" id="sidebarCancelPolicy">
+          Chính sách: Miễn phí hủy trước 48 giờ so với ngày nhận phòng. Sau thời điểm này, tính phí đêm đầu tiên.
+        </p>
       </div>
     </aside>
   </section>
+
+  <!-- ===================================================
+       CHECKOUT & PAYMENT MODAL CHO ĐẶT PHÒNG
+       =================================================== -->
+  <div class="checkout-modal-backdrop" id="roomCheckoutBackdrop" onclick="handleRoomBackdropClick(event)">
+    <div class="checkout-modal">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" style="font-size:10px">Thanh toán đặt phòng</span>
+          <h3 id="roomModalTitle">Xác nhận đặt phòng nghỉ</h3>
+        </div>
+        <button type="button" class="modal-close-btn" onclick="closeRoomModal()" aria-label="Đóng">
+          <i data-icon="close"></i>
+        </button>
+      </div>
+
+      <!-- VIEW 1: PAYMENT METHOD VIEW -->
+      <div class="modal-body" id="roomModalPayView">
+        <div class="order-summary-box">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="order-code-badge"><i data-icon="ticket"></i> Mã Booking: <b id="roomModalCode">DHL-RM8921</b></span>
+            <span style="font-size:12px;color:var(--brown);font-weight:700" id="roomModalDest">Phòng nghỉ cao cấp</span>
+          </div>
+          <div class="order-detail-grid">
+            <div>
+              <span class="lbl">Họ tên khách:</span>
+              <span class="val" id="roomModalCustName">Nguyễn Minh Anh</span>
+            </div>
+            <div>
+              <span class="lbl">Số Wapus / SĐT:</span>
+              <span class="val" id="roomModalCustPhone">0912 345 678</span>
+            </div>
+            <div>
+              <span class="lbl">Loại phòng:</span>
+              <span class="val" id="roomModalRoomName">Deluxe King</span>
+            </div>
+            <div>
+              <span class="lbl">Thời gian lưu trú:</span>
+              <span class="val" id="roomModalDates">20/11/2026 → 22/11/2026</span>
+            </div>
+            <div>
+              <span class="lbl">Số đêm:</span>
+              <span class="val" id="roomModalNights">2 đêm</span>
+            </div>
+            <div>
+              <span class="lbl">Dịch vụ đi kèm:</span>
+              <span class="val" style="color:var(--green)">Bao gồm Buffet sáng</span>
+            </div>
+          </div>
+          <div class="order-total-highlight">
+            <span>Tổng thanh toán:</span>
+            <span class="amt" id="roomModalTotal">2.755.000 ₫</span>
+          </div>
+        </div>
+
+        <!-- PAYMENT METHOD TABS -->
+        <div class="payment-tabs">
+          <button type="button" class="pay-tab-btn active" onclick="switchRoomPayTab('vietqr')">
+            <span class="icon"><i data-icon="smartphone"></i></span>
+            <span>Quét VietQR</span>
+          </button>
+          <button type="button" class="pay-tab-btn" onclick="switchRoomPayTab('bank')">
+            <span class="icon"><i data-icon="landmark"></i></span>
+            <span>Chuyển khoản</span>
+          </button>
+          <button type="button" class="pay-tab-btn" onclick="switchRoomPayTab('momo')">
+            <span class="icon"><i data-icon="wallet"></i></span>
+            <span>Ví MoMo</span>
+          </button>
+          <button type="button" class="pay-tab-btn" onclick="switchRoomPayTab('card')">
+            <span class="icon"><i data-icon="creditCard"></i></span>
+            <span>Thẻ tín dụng</span>
+          </button>
+        </div>
+
+        <!-- PAYMENT CONTENT -->
+        <div class="payment-content-box">
+          <!-- VIETQR TAB -->
+          <div id="roomPayVietQR" class="vietqr-view">
+            <div class="qr-code-holder">
+              <img id="roomVietqrImg" src="" alt="Mã VietQR phòng">
+              <span style="font-size:10px;color:var(--muted);margin-top:4px">Quét bằng app ngân hàng bất kỳ</span>
+            </div>
+            <div class="qr-instructions">
+              <div class="bank-pill">
+                <span>Ngân hàng Quân Đội (MB Bank)</span>
+              </div>
+              <div class="copy-row">
+                <span>Số tài khoản: <b>9999888868888</b></span>
+                <button type="button" class="copy-btn" onclick="copyRoomText('9999888868888', 'Số tài khoản')">Sao chép</button>
+              </div>
+              <div class="copy-row">
+                <span>Chủ tài khoản: <b>CONG TY DU LICH THE DAHLIA</b></span>
+                <button type="button" class="copy-btn" onclick="copyRoomText('CONG TY DU LICH THE DAHLIA', 'Tên chủ tài khoản')">Sao chép</button>
+              </div>
+              <div class="copy-row">
+                <span>Số tiền: <b id="roomQrMoney">2.755.000 ₫</b></span>
+                <button type="button" class="copy-btn" onclick="copyRoomMoney()">Sao chép</button>
+              </div>
+              <div class="copy-row">
+                <span>Nội dung chuyển khoản: <b id="roomQrTransferNote">DHLRM8921 0912345678</b></span>
+                <button type="button" class="copy-btn" onclick="copyRoomText(document.getElementById('roomQrTransferNote').innerText, 'Nội dung chuyển khoản')">Sao chép</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- BANK TAB -->
+          <div id="roomPayBank" style="display:none">
+            <table class="bank-info-table">
+              <tr>
+                <td>Ngân hàng:</td>
+                <td><b>Ngân hàng Ngoại Thương Việt Nam (Vietcombank)</b></td>
+              </tr>
+              <tr>
+                <td>Số tài khoản:</td>
+                <td>
+                  <b style="color:var(--brown)">0011004455668</b>
+                  <button type="button" class="copy-btn" onclick="copyRoomText('0011004455668', 'Số tài khoản')">Sao chép</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Chủ tài khoản:</td>
+                <td><b>CONG TY DU LICH THE DAHLIA VIETNAM</b></td>
+              </tr>
+              <tr>
+                <td>Chi nhánh:</td>
+                <td>Sở Giao Dịch Hà Nội</td>
+              </tr>
+              <tr>
+                <td>Nội dung:</td>
+                <td><b id="roomBankNote">DHLRM8921 0912345678</b></td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- MOMO TAB -->
+          <div id="roomPayMomo" style="display:none" class="sim-pay-box">
+            <div class="copy-row">
+              <span>Số MoMo: <b>0988 888 888</b> (Dahlia Travel)</span>
+              <button type="button" class="copy-btn" onclick="copyRoomText('0988888888', 'Số MoMo')">Sao chép</button>
+            </div>
+            <div class="copy-row">
+              <span>Nội dung: <b id="roomMomoNote">DHLRM8921</b></span>
+              <button type="button" class="copy-btn" onclick="copyRoomText(document.getElementById('roomMomoNote').innerText, 'Nội dung')">Sao chép</button>
+            </div>
+          </div>
+
+          <!-- CARD TAB -->
+          <div id="roomPayCard" style="display:none" class="sim-pay-box">
+            <div class="sim-card-form">
+              <div class="full c-field">
+                <label>Số thẻ Visa / Mastercard</label>
+                <input type="text" value="4111 2222 3333 4444">
+              </div>
+              <div class="c-field">
+                <label>Tên trên thẻ</label>
+                <input type="text" value="NGUYEN MINH ANH">
+              </div>
+              <div class="c-field">
+                <label>Hạn thẻ &amp; CVV</label>
+                <input type="text" value="12/28 - 888">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn checkout-btn" onclick="completeRoomBooking()">
+          <i data-icon="check"></i> Tôi đã thanh toán / Xác nhận đặt phòng <img src="images/arrow-w.svg" alt="">
+        </button>
+      </div>
+
+      <!-- VIEW 2: SUCCESS VIEW -->
+      <div class="modal-body payment-success-view" id="roomModalSuccessView">
+        <div class="success-check-circle"><i data-icon="check"></i></div>
+        <h3>Đặt Phòng Nghỉ Thành Công!</h3>
+        <p class="lead" style="font-size:14.5px;max-width:500px">
+          Cảm ơn Quý khách <b id="roomSuccessCustName" style="color:var(--brown-dark)">Nguyễn Minh Anh</b>. Phòng nghỉ của bạn đã được giữ chỗ thành công.
+        </p>
+
+        <div class="success-voucher-card">
+          <div style="display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding-bottom:8px">
+            <b>PHIẾU XÁC NHẬN ĐẶT PHÒNG NGHỈ</b>
+            <span style="color:var(--brown);font-weight:700" id="roomSuccessVoucherCode">MÃ: DHL-RM8921</span>
+          </div>
+          <div><b>Loại phòng:</b> <span id="roomSuccessRoomName">Deluxe King · 1 phòng</span></div>
+          <div><b>Thời gian:</b> <span id="roomSuccessDates">20/11/2026 → 22/11/2026 (2 đêm)</span></div>
+          <div><b>Tổng thanh toán:</b> <span id="roomSuccessTotal" style="color:var(--brown);font-weight:700">2.755.000 ₫</span></div>
+          <div><b>Bữa ăn:</b> <span style="color:var(--green);font-weight:600">Đã bao gồm buffet sáng miễn phí</span></div>
+          <div style="font-size:12px;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px">
+            <i data-icon="phone"></i> Lễ tân The Dahlia sẽ liên hệ với Quý khách qua Wapus / Số điện thoại <b id="roomSuccessCustPhone">0912 345 678</b> để chuẩn bị phòng chu đáo nhất.
+          </div>
+        </div>
+
+        <div class="success-actions">
+          <button type="button" class="btn alt" onclick="window.print()"><i data-icon="printer"></i> In phiếu xác nhận</button>
+          <a class="btn" id="roomSuccessWapusBtn" href="https://wa.me/84988888888" target="_blank">
+            <i data-icon="chat"></i> Nhắn Wapus / Zalo ngay
+          </a>
+        </div>
+        <button type="button" class="btn alt sm" style="width:100%" onclick="closeRoomModal()">
+          Đóng và quay lại
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-notice" id="roomToastNotice">
+    <span id="roomToastIcon"><i data-icon="check"></i></span>
+    <span id="roomToastMsg">Thông báo</span>
+  </div>
+
+  <!-- FOOTER -->
   <footer>
     <div class="fcols">
       <div>
-        <p class="brand">THE DAHLIA HANOI.</p>
-        <p style="font-size:10px;color:var(--brown)">HOTEL &amp; APARTMENT</p>
-        <p>Một chốn nghỉ an yên. Một hành trình đáng nhớ.</p>
+        <p class="brand">THE DAHLIA TRAVEL.</p>
+        <p style="font-size:11px;color:var(--brown);font-weight:600">CÔNG TY DU LỊCH &amp; NGHỈ DƯỠNG CAO CẤP</p>
+        <p style="font-size:13px;line-height:1.6">Hệ thống tour du lịch miền Bắc cao cấp: Ninh Bình, Hà Giang, Sapa, Hà Nội, Hạ Long với tiệc buffet miễn phí.</p>
       </div>
-      <div><b>Hành trình của bạn</b>
-        <p>Khám phá tour · Phòng &amp; căn hộ</p>
-        <p>Gửi yêu cầu · Điều kiện đặt chỗ</p>
+      <div>
+        <b>Tour nổi bật</b>
+        <p><a href="tour.html?tour=ninh-binh">Tour Ninh Bình 1 ngày</a></p>
+        <p><a href="tour.html?tour=ha-giang">Tour Hà Giang 3N2Đ</a></p>
+        <p><a href="tour.html?tour=sapa">Tour Sapa Fansipan 2N1Đ</a></p>
+        <p><a href="tour.html?tour=ha-noi">Tour Hà Nội Food &amp; City</a></p>
+        <p><a href="tour.html?tour=ha-long">Du thuyền 5 Sao Hạ Long</a></p>
       </div>
-      <div><b>Liên hệ tư vấn</b>
-        <p>booking@dahlia.example</p>
-        <p>+84 24 0000 0000 · Hà Nội, Việt Nam</p>
-        <p class="copy">thông tin</p>
+      <div>
+        <b>Hỗ trợ khách hàng</b>
+        <p><a href="tour.html">Khám phá tour</a></p>
+        <p><a href="booking.html">Đặt phòng nghỉ</a></p>
+        <p><a href="contact.html">Liên hệ tư vấn</a></p>
+        <p><a href="tour.html">Chính sách hủy đổi</a></p>
+      </div>
+      <div>
+        <b>Liên hệ 24/7</b>
+        <p><i data-icon="phone"></i> Hotline: <b>1900 888 666</b></p>
+        <p><i data-icon="chat"></i> Wapus / Zalo: <b>0988 888 888</b></p>
+        <p><i data-icon="mail"></i> Email: <b>booking@dahlia.travel</b></p>
+        <p><i data-icon="mapPin"></i> Địa chỉ: Hoàn Kiếm, Hà Nội, Việt Nam</p>
       </div>
     </div>
     <hr>
-    <p class="copy">© 2026 THE DAHLIA HANOI.</p>
+    <p class="copy">© 2026 THE DAHLIA TRAVEL. Tất cả quyền được bảo lưu.</p>
   </footer>
+
+  <!-- SCRIPT LOGIC FOR ROOMS SELECTION & CALCULATION -->
+  <script>
+    // DANH SÁCH PHÒNG NGHỈ
+    const ROOMS_DATA = [
+      {
+        id: "deluxe-king",
+        name: "Deluxe King",
+        image: "images/story.png",
+        price: 1450000,
+        area: "28 m²",
+        bed: "1 giường King cỡ lớn",
+        guests: "Tối đa 2 khách",
+        stock: "Còn 3 phòng cho ngày đã chọn",
+        perks: "Wi-Fi miễn phí · Bữa sáng buffet · Điều hòa 2 chiều<br>Phòng tắm riêng vòi sen &amp; bồn tắm nằm · Không hút thuốc",
+        breakfast: "Bữa sáng buffet cho 2 khách đã bao gồm"
+      },
+      {
+        id: "suite-view",
+        name: "Executive Suite View Phố Cổ",
+        image: "images/room2.png",
+        price: 1850000,
+        area: "36 m²",
+        bed: "1 giường King + 1 Sofa bed",
+        guests: "Tối đa 2–3 khách",
+        stock: "Còn 4 phòng cho ngày đã chọn",
+        perks: "View phố cổ toàn cảnh · Bữa sáng buffet 5 sao · Bồn sục Jacuzzi<br>Máy pha cà phê Espresso · Trái cây tươi chào đón · Không hút thuốc",
+        breakfast: "Bữa sáng buffet 5 sao cho 2–3 khách đã bao gồm"
+      },
+      {
+        id: "apartment",
+        name: "Căn hộ một phòng ngủ",
+        image: "images/room-apt.png",
+        price: 2200000,
+        area: "45 m²",
+        bed: "1 giường King + Bếp riêng",
+        guests: "Tối đa 3 khách",
+        stock: "Còn 2 căn hộ cho ngày đã chọn",
+        perks: "Wi-Fi tốc độ cao · Bữa sáng buffet · Điều hòa<br>Phòng khách &amp; bàn ăn riêng · Ban công view thoáng · Không hút thuốc",
+        breakfast: "Bữa sáng buffet cho 3 khách đã bao gồm"
+      }
+    ];
+
+    // STATE
+    let selectedRoomId = "deluxe-king";
+    let stayNights = 2;
+    let roomGrandTotal = 0;
+    let roomBookingCode = "";
+
+    // FORMAT CURRENCY
+    function formatMoney(amount) {
+      return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
+    }
+
+    // FORMAT DATE VN (DD/MM/YYYY)
+    function formatDateVN(dateObj) {
+      const d = String(dateObj.getDate()).padStart(2, '0');
+      const m = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const y = dateObj.getFullYear();
+      return `${d}/${m}/${y}`;
+    }
+
+    // INIT
+    document.addEventListener("DOMContentLoaded", function () {
+      const now = new Date();
+      const checkIn = new Date(now);
+      checkIn.setDate(checkIn.getDate() + 2);
+      
+      const checkOut = new Date(checkIn);
+      checkOut.setDate(checkOut.getDate() + 2);
+
+      const toDateVal = (d) => {
+        const yyyy = d.getFullYear();
+        const mm = String(d.getMonth() + 1).padStart(2, '0');
+        const dd = String(d.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+      };
+
+      document.getElementById("checkInInput").value = toDateVal(checkIn);
+      document.getElementById("checkOutInput").value = toDateVal(checkOut);
+
+      renderRoomsList();
+      updateSidebarSummary();
+    });
+
+    // RENDER ROOMS LIST WITH MINIMALIST LINE ICONS
+    function renderRoomsList() {
+      const container = document.getElementById("roomsContainer");
+      container.innerHTML = ROOMS_DATA.map(room => {
+        const isSelected = room.id === selectedRoomId;
+        const subtotal = room.price * stayNights;
+        const discounted = Math.round(subtotal * 0.95);
+        const radioIconHtml = typeof getIcon === 'function' ? getIcon(isSelected ? 'radioChecked' : 'radioUnchecked') : '';
+
+        return `
+          <div class="room2 ${isSelected ? 'sel' : ''}" onclick="selectRoom('${room.id}')" id="card-${room.id}">
+            <img src="${room.image}" alt="${room.name}">
+            <div class="d">
+              <div class="n">
+                <span id="radio-${room.id}" style="color:var(--brown)">${radioIconHtml}</span>
+                ${room.name}
+              </div>
+              <p><i data-icon="maximize"></i> ${room.area} · <i data-icon="bed"></i> ${room.bed} · <i data-icon="users"></i> ${room.guests}</p>
+              <p style="color:var(--ink)">${room.perks}</p>
+              <p class="ok"><i data-icon="check"></i> ${room.stock}</p>
+              <span class="p">${formatMoney(room.price)} / đêm</span>
+              <p>${stayNights} đêm: <b>${formatMoney(discounted)}</b> sau ưu đãi 5%</p>
+              <span class="c" id="action-text-${room.id}">
+                ${isSelected ? '✓ Đã chọn · 1 phòng' : 'Chọn phòng này →'}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(container);
+      }
+    }
+
+    // CHỌN PHÒNG KHI TICK/CLICK VÀO PHÒNG
+    function selectRoom(roomId) {
+      selectedRoomId = roomId;
+      const room = ROOMS_DATA.find(r => r.id === roomId);
+      if (!room) return;
+
+      ROOMS_DATA.forEach(r => {
+        const card = document.getElementById("card-" + r.id);
+        const radio = document.getElementById("radio-" + r.id);
+        const actionText = document.getElementById("action-text-" + r.id);
+        
+        if (card && radio && actionText) {
+          const isCurrent = r.id === roomId;
+          card.classList.toggle("sel", isCurrent);
+          if (typeof getIcon === 'function') {
+            radio.innerHTML = getIcon(isCurrent ? 'radioChecked' : 'radioUnchecked');
+          }
+          actionText.innerText = isCurrent ? "✓ Đã chọn · 1 phòng" : "Chọn phòng này →";
+        }
+      });
+
+      updateSidebarSummary();
+      showRoomToast(`Đã chọn phòng: ${room.name}!`);
+    }
+
+    // CẬP NHẬT NGÀY & SỐ ĐÊM
+    function handleDatesChange(isManualSearch = false) {
+      const checkInVal = document.getElementById("checkInInput").value;
+      const checkOutVal = document.getElementById("checkOutInput").value;
+
+      if (!checkInVal || !checkOutVal) return;
+
+      const dIn = new Date(checkInVal);
+      const dOut = new Date(checkOutVal);
+
+      if (dOut <= dIn) {
+        dOut.setDate(dIn.getDate() + 1);
+        const yyyy = dOut.getFullYear();
+        const mm = String(dOut.getMonth() + 1).padStart(2, '0');
+        const dd = String(dOut.getDate()).padStart(2, '0');
+        document.getElementById("checkOutInput").value = `${yyyy}-${mm}-${dd}`;
+      }
+
+      const diffTime = Math.abs(new Date(document.getElementById("checkOutInput").value) - new Date(checkInVal));
+      stayNights = Math.max(1, Math.round(diffTime / (1000 * 60 * 60 * 24)));
+
+      document.getElementById("availStatusText").innerHTML = `<i data-icon="check"></i> 3 loại phòng còn trống · ${stayNights} đêm lưu trú · Giá ưu đãi trực tiếp`;
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("availStatusText"));
+      }
+
+      renderRoomsList();
+      updateSidebarSummary();
+
+      if (isManualSearch) {
+        showRoomToast(`Đã kiểm tra phòng cho ${stayNights} đêm lưu trú!`);
+      }
+    }
+
+    // CẬP NHẬT THÔNG TIN SIDEBAR
+    function updateSidebarSummary() {
+      const room = ROOMS_DATA.find(r => r.id === selectedRoomId);
+      if (!room) return;
+
+      const checkInVal = document.getElementById("checkInInput").value;
+      const checkOutVal = document.getElementById("checkOutInput").value;
+      const guestText = document.getElementById("guestSelect").options[document.getElementById("guestSelect").selectedIndex].text;
+
+      const dIn = new Date(checkInVal);
+      const dOut = new Date(checkOutVal);
+
+      document.getElementById("sidebarRoomImg").src = room.image;
+      document.getElementById("sidebarRoomName").innerText = `${room.name} · 1 phòng`;
+
+      document.getElementById("sidebarStayDetails").innerHTML = `
+        ${formatDateVN(dIn)} → ${formatDateVN(dOut)}<br>
+        ${stayNights} đêm · ${guestText.split('·')[0].trim()}<br>
+        ${room.breakfast}
+      `;
+
+      const subtotal = room.price * stayNights;
+      const discount = Math.round(subtotal * 0.05);
+      roomGrandTotal = subtotal - discount;
+
+      document.getElementById("sidebarFormula").innerText = `${stayNights} đêm × ${formatMoney(room.price)}`;
+      document.getElementById("sidebarSubtotal").innerText = formatMoney(subtotal);
+      document.getElementById("sidebarDiscount").innerText = `−${formatMoney(discount)}`;
+      document.getElementById("sidebarGrandTotal").innerText = formatMoney(roomGrandTotal);
+      document.getElementById("sidebarConfirmBtn").innerHTML = `Xác nhận đặt phòng · ${formatMoney(roomGrandTotal)} <img src="images/arrow-w.svg" alt="">`;
+    }
+
+    // ===================================================
+    // CHECKOUT MODAL LOGIC CHO ĐẶT PHÒNG
+    // ===================================================
+    function openRoomCheckoutModal() {
+      const name = document.getElementById("b1").value.trim();
+      const email = document.getElementById("b2").value.trim();
+      const phone = document.getElementById("b3").value.trim();
+
+      if (!name || !phone || !email) {
+        showRoomToast("Vui lòng điền đầy đủ Họ tên, Số điện thoại và Email!", "error");
+        return;
+      }
+
+      const room = ROOMS_DATA.find(r => r.id === selectedRoomId);
+      const checkInVal = document.getElementById("checkInInput").value;
+      const checkOutVal = document.getElementById("checkOutInput").value;
+      const dIn = new Date(checkInVal);
+      const dOut = new Date(checkOutVal);
+
+      roomBookingCode = "DHL-RM" + Math.floor(1000 + Math.random() * 9000);
+
+      document.getElementById("roomModalTitle").innerText = `Xác nhận đặt phòng: ${room.name}`;
+      document.getElementById("roomModalCode").innerText = roomBookingCode;
+      document.getElementById("roomModalCustName").innerText = name;
+      document.getElementById("roomModalCustPhone").innerText = phone;
+      document.getElementById("roomModalRoomName").innerText = room.name;
+      document.getElementById("roomModalDates").innerText = `${formatDateVN(dIn)} → ${formatDateVN(dOut)}`;
+      document.getElementById("roomModalNights").innerText = `${stayNights} đêm lưu trú`;
+      document.getElementById("roomModalTotal").innerText = formatMoney(roomGrandTotal);
+      document.getElementById("roomQrMoney").innerText = formatMoney(roomGrandTotal);
+
+      const transferSyntax = `${roomBookingCode.replace("-", "")} ${phone.replace(/\s+/g, "")}`;
+      document.getElementById("roomQrTransferNote").innerText = transferSyntax;
+      document.getElementById("roomBankNote").innerText = transferSyntax;
+      document.getElementById("roomMomoNote").innerText = roomBookingCode;
+
+      const qrUrl = `https://api.vietqr.io/image/970422-9999888868888-qUq8b1b.jpg?accountName=CONG%20TY%20DU%20LICH%20THE%20DAHLIA&amount=${roomGrandTotal}&addInfo=${encodeURIComponent(transferSyntax)}`;
+      document.getElementById("roomVietqrImg").src = qrUrl;
+
+      document.getElementById("roomModalPayView").style.display = "flex";
+      document.getElementById("roomModalSuccessView").style.display = "none";
+      document.getElementById("roomCheckoutBackdrop").classList.add("open");
+
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("roomCheckoutBackdrop"));
+      }
+    }
+
+    function closeRoomModal() {
+      document.getElementById("roomCheckoutBackdrop").classList.remove("open");
+    }
+
+    function handleRoomBackdropClick(e) {
+      if (e.target.id === "roomCheckoutBackdrop") {
+        closeRoomModal();
+      }
+    }
+
+    function switchRoomPayTab(tabId) {
+      const tabs = ["vietqr", "bank", "momo", "card"];
+      tabs.forEach(t => {
+        const el = document.getElementById("roomPay" + t.charAt(0).toUpperCase() + t.slice(1));
+        if (el) {
+          el.style.display = (t === tabId) ? ((t === "vietqr") ? "flex" : "block") : "none";
+        }
+      });
+      document.querySelectorAll("#roomModalPayView .pay-tab-btn").forEach((btn, idx) => {
+        btn.classList.toggle("active", tabs[idx] === tabId);
+      });
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("roomModalPayView"));
+      }
+    }
+
+    function completeRoomBooking() {
+      const room = ROOMS_DATA.find(r => r.id === selectedRoomId);
+      const name = document.getElementById("b1").value.trim();
+      const phone = document.getElementById("b3").value.trim();
+      const checkInVal = document.getElementById("checkInInput").value;
+      const checkOutVal = document.getElementById("checkOutInput").value;
+      const dIn = new Date(checkInVal);
+      const dOut = new Date(checkOutVal);
+
+      document.getElementById("roomModalPayView").style.display = "none";
+      document.getElementById("roomModalSuccessView").style.display = "flex";
+
+      document.getElementById("roomSuccessCustName").innerText = name;
+      document.getElementById("roomSuccessVoucherCode").innerText = "MÃ: " + roomBookingCode;
+      document.getElementById("roomSuccessRoomName").innerText = `${room.name} · 1 phòng`;
+      document.getElementById("roomSuccessDates").innerText = `${formatDateVN(dIn)} → ${formatDateVN(dOut)} (${stayNights} đêm)`;
+      document.getElementById("roomSuccessTotal").innerText = formatMoney(roomGrandTotal);
+      document.getElementById("roomSuccessCustPhone").innerText = phone;
+
+      const wapusMsg = encodeURIComponent(`Xin chào Dahlia Travel, tôi vừa đặt phòng ${room.name} với mã booking: ${roomBookingCode}. Số tiền ${formatMoney(roomGrandTotal)}. Vui lòng xác nhận giúp tôi!`);
+      document.getElementById("roomSuccessWapusBtn").href = `https://wa.me/84988888888?text=${wapusMsg}`;
+
+      if (typeof renderLineIcons === 'function') {
+        renderLineIcons(document.getElementById("roomModalSuccessView"));
+      }
+
+      showRoomToast("Đặt phòng thành công! Cảm ơn bạn.");
+    }
+
+    function copyRoomText(text, label) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          showRoomToast(`Đã sao chép ${label}!`);
+        });
+      } else {
+        const temp = document.createElement("input");
+        temp.value = text;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand("copy");
+        document.body.removeChild(temp);
+        showRoomToast(`Đã sao chép ${label}!`);
+      }
+    }
+
+    function copyRoomMoney() {
+      copyRoomText(String(roomGrandTotal), "Số tiền");
+    }
+
+    function showRoomToast(msg, type = "normal") {
+      const toast = document.getElementById("roomToastNotice");
+      const toastMsg = document.getElementById("roomToastMsg");
+      const toastIcon = document.getElementById("roomToastIcon");
+
+      toastMsg.innerText = msg;
+      if (typeof getIcon === 'function') {
+        toastIcon.innerHTML = (type === "error" ? getIcon("close") : getIcon("check"));
+      } else {
+        toastIcon.innerText = (type === "error" ? "✕" : "✓");
+      }
+      toast.className = `toast-notice ${type === 'error' ? 'error' : 'success'}`;
+      toast.style.display = "flex";
+
+      clearTimeout(window._roomToastTimer);
+      window._roomToastTimer = setTimeout(() => {
+        toast.style.display = "none";
+      }, 3000);
+    }
+  </script>
 </body>
 
 </html>
